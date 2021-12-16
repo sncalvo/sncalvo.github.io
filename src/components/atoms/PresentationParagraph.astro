@@ -1,14 +1,22 @@
 ---
-const { name } = Astro.props;
+const { name, position, age, place } = Astro.props;
 ---
 <div>
-    <div class="font-semibold text-2xl uppercase text-white">
-        <p>
-            Hi! I'm <span class="text-violet-700">{name}</span>.
-        </p>
-        <div class="flex flex-row">
-            FullStack Web Developer @ EagerWorks
-            <div class="cursor-2xl"></div>
+    <div class="font-semibold text-2xl text-white">
+        <div>
+            <p><span class="text-violet-700">const</span> name <span class="text-red-400">=</span> <span class="text-green-500 capitalize">'{name}'</span>;</p>
+            <p><span class="text-violet-700">let</span> age <span class="text-red-400">=</span> <span class="text-green-500 capitalize">'{age}'</span>;</p>
+            <div>
+                <div>
+                    <span class="text-violet-700">const</span> currentJob <span class="text-red-400">=</span> <span class="text-yellow-600">&#123</span><br/>
+                        &ensp; position: <span class="text-green-500 capitalize">'{position}'</span>,<br/>
+                        &ensp; place: <span class="text-green-500 capitalize">'{place}'</span>,<br/>
+                </div>
+                <div class="flex flex-row">
+                    <span class="text-yellow-600">&#125;</span>
+                    <div class="cursor-2xl"></div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
