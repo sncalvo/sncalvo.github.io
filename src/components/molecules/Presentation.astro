@@ -1,0 +1,14 @@
+---
+import PresentationParagraph from '../atoms/PresentationParagraph.astro';
+import BackgroundImage from '../atoms/BackgroundImage.astro';
+
+const { name } = Astro.props;
+---
+<div
+    class="h-screen w-ful flex items-center justify-center"
+>
+    <div class="z-10 p-5">
+        <PresentationParagraph name={name} />
+    </div>
+    <BackgroundImage imageSrc="/assets/test-background.png" />
+</div>

@@ -1,0 +1,10 @@
+---
+const { icon, name, description } = Astro.props;
+---
+<div class="transition-all ease-in-out delay-100 duration-300 md:hover:col-span-2 flex flex-col rounded-md bg-zinc-900 p-4 items-center gap-5">
+    <img class="h-20 w-20 stroke-violet-600" src={icon} />
+
+    <h3 class="text-2xl text-violet-700 text-center font-medium">{name}</h3>
+
+    <h5 class="text-white text-lg font-normal">{description}</h5>
+</div>

@@ -1,0 +1,15 @@
+---
+import Skill from '../atoms/Skill.astro';
+
+const { skills } = Astro.props;
+---
+<div class="p-5">
+    <h2 class="text-3xl text-white mb-10">
+        This are my <span class="text-violet-700">skills</span>:
+    </h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+        {skills.map(({ icon, name, description }) => (
+            <Skill icon={icon} name={name} description={description} />
+        ))}
+    </div>
+</div>
