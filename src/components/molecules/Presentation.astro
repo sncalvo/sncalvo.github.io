@@ -5,10 +5,10 @@ import BackgroundImage from '../atoms/BackgroundImage.astro';
 const { name, age, position, place } = Astro.props;
 ---
 <div
-    class="h-screen w-ful flex items-center justify-center"
+	class="h-screen w-ful flex items-center justify-center"
 >
-    <div class="z-10 p-5">
-        <PresentationParagraph name={name} age={age} position={position} place={place} />
-    </div>
-    <BackgroundImage imageSrc="/assets/test-background.png" />
+	<div class="z-10 p-5">
+		<PresentationParagraph name={name} age={age} position={position} place={place} />
+	</div>
+	<BackgroundImage imageSrc="/assets/test-background.png" />
 </div>
