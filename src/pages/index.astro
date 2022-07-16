@@ -12,7 +12,13 @@ import Contact from '../components/molecules/Contact.jsx';
 import '../styles/global.css';
 
 // Component Script:
-let title = 'My Astro Site';
+let title = 'Sncalvo portfolio';
+let description = `
+  This is some trash text discribing
+  some of my main qualities as a full stack Developer.
+  I should also describe a little bit about myself
+  and some other stuff of why I do what I do.
+  `;
 
 const skills = [
   {
@@ -71,6 +77,10 @@ const techs = [
   <title>{title}</title>
 
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="https://sncalvo.com/assets/profile.jpeg" />
 </head>
 <body class="bg-primary-500">
   <Menu client:visible />
