@@ -2,10 +2,7 @@ import { createSignal } from 'solid-js';
 
 const PageLink = ({ name, id }) => (
   <li class="flex z-10">
-    <a
-      href={`#${id}`}
-      class="text-secondary-500 w-full hover:text-white p-2 border-2 rounded border-secondary-500 hover:bg-secondary-500 focus:outline-dotted focus:outline-3 transition-all duration-300 delay-100"
-    >
+    <a href={`#${id}`} class="primary-actionable w-full">
       <span class="sr-only">{name}</span>
       <span>{name}</span>
     </a>
@@ -48,21 +45,21 @@ export default function SolidCounter() {
         </div>
       </button>
       <nav>
-        <ul
+        <div
           class="transition-all duration-300 absolute left-0 transform p-3 items-stretch"
           classList={{
             '-translate-x-full': !open(),
           }}
         >
-          <div class="flex flex-col space-y-2 p-2 border-2 rounded border-secondary-500 relative">
+          <ul class="flex flex-col space-y-2 p-2 border-2 rounded border-secondary-500 relative">
             <div class="absolute left-0 top-0 bottom-0 right-0 bg-primary-500 blur-sm z-0"></div>
             <PageLink name="Presentation" id="Presentation" />
             <PageLink name="Skill Set" id="SkillSet" />
             <PageLink name="About" id="About" />
             <PageLink name="Tech Set" id="TechSet" />
             <PageLink name="Contact" id="Contact" />
-          </div>
-        </ul>
+          </ul>
+        </div>
       </nav>
     </div>
   );

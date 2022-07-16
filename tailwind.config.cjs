@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        presentation: 'url(/assets/test-background.png)',
+        presentation: 'url(/assets/background.png)',
       },
       colors: {
         primary: {

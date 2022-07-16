@@ -5,8 +5,9 @@ const { name, icon, description } = Astro.props;
 <div class="transition-all duration-150 rounded-md group text-white bg-primary-400 p-5 max-h-20 hover:max-h-full">
 	<div class="flex flex-row items-center">
 		<div class="mr-5">
-			<img class="transition-all duration-150 flex group-hover:hidden" src="/assets/arrow-right.svg" />
-			<img class="transition-all duration-150 hidden group-hover:flex" src="/assets/arrow-down.svg" />
+			<div class="transition-all duration-150 flex group-hover:rotate-90">
+				<Icon name="tabler:chevron-right" height={26} />
+			</div>
 		</div>
 		<h4 class="text-xl">{name}</h4>
 	</div>

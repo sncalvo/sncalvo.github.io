@@ -23,7 +23,7 @@ export default function Contact() {
 
   return (
     <div className="flex flex-col" id="Contact">
-      <h1 className="text-3xl text-secondary-500">Contact:</h1>
+      <h1 className="text-3xl text-secondary-500 mb-10">Contact:</h1>
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col space-y-2 p-2 border-2 rounded border-secondary-500 relative">
           <label htmlFor="email" className="text-secondary-500">
@@ -47,15 +47,12 @@ export default function Contact() {
             }
             className="w-full p-2 border-2 rounded border-secondary-500 text-secondary-500 bg-transparent"
           />
-          <button
-            type="submit"
-            className="w-full p-2 border-2 text-secondary-500 rounded border-secondary-500"
-          >
+          <button type="submit" className="w-full primary-actionable">
             Send
           </button>
         </div>
       </form>
-      {error && <p className="text-red-500">{error}</p>}
+      {error && <p className="bg-red-500 text-white">{error}</p>}
     </div>
   );
 }

@@ -77,6 +77,7 @@ const techs = [
 
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
+  <meta name="description" content={description}>
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content="https://sncalvo.com/assets/profile.jpeg" />
@@ -91,7 +92,7 @@ const techs = [
       place="Eagerworks"
     />
 
-    <div class="p-4 md:p-8">
+    <div class="p-4 md:p-8 flex flex-col gap-3">
       <SkillSet skills={skills} />
 
       <About />
