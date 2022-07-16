@@ -3,8 +3,11 @@ import Tech from '../atoms/Tech.astro';
 
 const { techs } = Astro.props;
 ---
-<div class="grid grid-cols-1 md:grid-cols-2 md:p-10 gap-3" id="TechSet">
-	{techs.map((tech) => (
-		<Tech {...tech} />
-	))}
+<div>
+	<h2 class="text-secondary-500 text-3xl mb-10">Techs:</h2>
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-3" id="TechSet">
+		{techs.map((tech) => (
+			<Tech {...tech} />
+		))}
+	</div>
 </div>

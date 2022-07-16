@@ -46,13 +46,13 @@ export default function SolidCounter() {
       </button>
       <nav>
         <div
-          class="transition-all duration-300 absolute left-0 transform p-3 items-stretch"
+          class="transition-all duration-300 absolute left-0 pt-2 pl-2 transform items-stretch"
           classList={{
             '-translate-x-full': !open(),
           }}
         >
+          <div class="absolute left-2 top-2 bottom-0 right-0 bg-primary-500 blur-sm z-0" />
           <ul class="flex flex-col space-y-2 p-2 border-2 rounded border-secondary-500 relative">
-            <div class="absolute left-0 top-0 bottom-0 right-0 bg-primary-500 blur-sm z-0"></div>
             <PageLink name="Presentation" id="Presentation" />
             <PageLink name="Skill Set" id="SkillSet" />
             <PageLink name="About" id="About" />
