@@ -27,7 +27,7 @@ export default function PresentationParagraph({ name, position, birthDate, place
           <div>
             <div>
               <span class="text-secondary-500">const</span> currentJob{' '}
-              <span class="text-red-400">=</span> <span class="text-yellow-600">&#123</span>
+              <span class="text-red-400">=</span> <span class="text-yellow-600">&#123;</span>
               <br />
               &ensp; position: <span class="text-green-500 capitalize">'{position}'</span>,<br />
               &ensp; place: <span class="text-green-500 capitalize">'{place}'</span>,<br />
