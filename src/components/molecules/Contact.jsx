@@ -6,7 +6,7 @@ const schema = yup.object().shape({
   message: yup.string().required(),
 });
 
-export default Contact = () => {
+export default function Contact() {
   const [emailInfo, setEmailInfo] = createSignal({ email: '', message: '' });
   const [error, setError] = createSignal('');
 
@@ -58,4 +58,4 @@ export default Contact = () => {
       {error && <p className="text-red-500">{error}</p>}
     </div>
   );
-};
+}
