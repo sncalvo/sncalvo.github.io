@@ -16,25 +16,25 @@ const skills = [
   {
     name: 'Test skill',
     description: 'This is a test skill. Since it is just a test, it does not contain any important info',
-    icon: '/assets/rocket.svg',
+    icon: 'tabler:settings',
     thumbnail: '/assets/productivity.png'
   },
   {
     name: 'Test skill',
     description: 'This is a test skill. Since it is just a test, it does not contain any important info',
-    icon: '/assets/rocket.svg',
+    icon: 'tabler:settings',
     thumbnail: '/assets/productivity.png'
   },
   {
     name: 'Test skill',
     description: 'This is a test skill. Since it is just a test, it does not contain any important info',
-    icon: '/assets/rocket.svg',
+    icon: 'tabler:settings',
     thumbnail: '/assets/productivity.png'
   },
   {
     name: 'Test skill',
     description: 'This is a test skill. Since it is just a test, it does not contain any important info',
-    icon: '/assets/rocket.svg',
+    icon: 'tabler:settings',
     thumbnail: '/assets/productivity.png'
   },
 ];
@@ -43,22 +43,22 @@ const techs = [
   {
     name: 'Typescript',
     description: 'Typescript is a nice extension of JS meant to be safer. jeje',
-    icon: '/assets/typescript.svg',
+    icon: 'simple-icons:typescript',
   },
   {
     name: 'Typescript',
     description: 'Typescript is a nice extension of JS meant to be safer. jeje',
-    icon: '/assets/typescript.svg',
+    icon: 'simple-icons:typescript',
   },
   {
     name: 'Typescript',
     description: 'Typescript is a nice extension of JS meant to be safer. jeje',
-    icon: '/assets/typescript.svg',
+    icon: 'simple-icons:typescript',
   },
   {
     name: 'Typescript',
     description: 'Typescript is a nice extension of JS meant to be safer. jeje',
-    icon: '/assets/typescript.svg',
+    icon: 'simple-icons:typescript',
   },
 ];
 ---
@@ -79,12 +79,14 @@ const techs = [
       place="Eagerworks"
     />
 
-    <SkillSet skills={skills} />
+    <div class="p-8">
+      <SkillSet skills={skills} />
 
-    <About />
+      <About />
 
-    <TechSet techs={techs} />
-    <!-- <SolidCounter client:visible /> -->
+      <TechSet techs={techs} />
+      <!-- <SolidCounter client:visible /> -->
+    </div>
   </main>
 </body>
 </html>

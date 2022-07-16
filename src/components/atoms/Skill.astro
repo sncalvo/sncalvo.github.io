@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon'
+
 const { icon, name, description, thumbnail } = Astro.props;
 ---
 <style>
@@ -28,32 +30,36 @@ const { icon, name, description, thumbnail } = Astro.props;
 
 
 
-<div class="flex flex-col rounded-md items-center gap-5 h-80">
+<div class="flex flex-col rounded-md items-center gap-5 h-80 text-white">
 	<div class="flip h-full w-full">
 		<div class="transition-all ease-in-out delay-100 duration-300 flip-content border-2 border-secondary-500 rounded w-full h-full">
-			<div class="grid grid-rows-6 grid-flow-col gap-0 flip-front bg-primary-400 justify-between px-2">
-				<div class="row-span-1 flex flex-row text-center items-center">
-					<img class="h-10 w-10 mr-2" src={icon} />
+			<div class="grid grid-rows-6 grid-flow-col gap-0 flip-front bg-primary-400 px-2">
+				<div class="row-span-1 flex flex-row text-center gap-1 items-center">
+          <Icon name={icon} height="100%" />
 
-					<h3 class="text-xl text-white text-center font-medium">{name}</h3>
+					<h3 class="text-xl text-center font-medium">{name}</h3>
 				</div>
 
 				<div class="row-span-4">
 					<img src={thumbnail} class="w-full h-full object-contain bg-secondary-500 rounded"/>
 				</div>
 
-				<div class="row-span-1 flex flex-row text-center items-center rotate-180">
-					<img class="h-10 w-10 mr-2" src={icon} />
+				<div class="row-span-1 flex flex-row text-center gap-1 items-center rotate-180">
+					<Icon name={icon} height="100%" />
 
-					<h3 class="text-xl text-white text-center font-medium">{name}</h3>
+					<h3 class="text-xl text-center font-medium">{name}</h3>
 				</div>
 			</div>
-			<div class="flip-back bg-primary-400 flex flex-col justify-between p-2">
-				<img class="h-10 w-10 mr-2 self-start" src={icon} />
+			<div class="flip-back bg-primary-400 grid grid-rows-6 grid-flow-col gap-0 p-2">
+				<div class="row-span-1">
+          <Icon name={icon} height="100%" />
+        </div>
 
-				<h3 class="text-md text-white font-medium text-left">{description}</h3>
+				<h3 class="text-md font-medium text-left row-span-4">{description}</h3>
 
-				<img class="h-10 w-10 mr-2 rotate-180 self-end" src={icon} />
+        <div class="row-span-1 rotate-180">
+          <Icon name={icon} height="100%" />
+        </div>
 			</div>
 		</div>
 	</div>

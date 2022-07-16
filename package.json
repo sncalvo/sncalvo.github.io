@@ -11,7 +11,8 @@
   "devDependencies": {
     "@astrojs/solid-js": "^0.4.0",
     "astro": "1.0.0-beta.72",
-    "tailwindcss": "^3.0.5",
-    "solid-js": "1.4.7"
+    "astro-icon": "^0.7.1",
+    "solid-js": "1.4.7",
+    "tailwindcss": "^3.0.5"
   }
 }
