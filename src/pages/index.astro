@@ -6,6 +6,7 @@ import About from '../components/molecules/About.astro';
 import TechSet from '../components/molecules/TechSet.astro';
 // You can import components from any supported Framework here!
 import SolidCounter from '../components/SolidCounter.jsx';
+import Menu from '../components/molecules/Menu.jsx';
 
 import '../styles/global.css';
 
@@ -71,6 +72,7 @@ const techs = [
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 </head>
 <body class="bg-primary-500">
+  <Menu client:visible />
   <main>
     <Presentation
       name="Santiago Calvo"
@@ -85,7 +87,6 @@ const techs = [
       <About />
 
       <TechSet techs={techs} />
-      <!-- <SolidCounter client:visible /> -->
     </div>
   </main>
 </body>
