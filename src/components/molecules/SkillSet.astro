@@ -7,7 +7,7 @@ const { skills } = Astro.props;
 	<h2 class="text-3xl text-white mb-10">
 		These are my <span class="text-secondary-500">skills</span>:
 	</h2>
-	<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+	<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
 		{skills.map((skill) => (
 			<Skill {...skill} />
 		))}
