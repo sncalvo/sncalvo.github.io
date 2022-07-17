@@ -17,7 +17,6 @@ export default function SolidCounter() {
   return (
     <div class="fixed z-10 p-3">
       <button
-        id="solid"
         class="transition-all rounded duration-300 delay-100 text-secondary-500 hover:text-white w-10 h-10 relative focus:outline-secondary-500 focus:outline-4 border-secondary-500 border-2 hover:bg-secondary-500 hover:border-0"
         type="button"
         onClick={toggle}
