@@ -11,8 +11,8 @@ const { name, icon, description } = Astro.props;
 		</div>
 		<h3 class="text-xl">{name}</h3>
 	</div>
-	<div class="hidden group-hover:flex gap-4 items-center">
-		<Icon name={icon} height={54} />
-		<p class="text-lg">{description}</p>
+	<div class="hidden group-hover:flex gap-4 items-start justify-start py-2">
+		<Icon name={icon} width={400} />
+		<p class="text-sm">{description}</p>
 	</div>
 </div>
