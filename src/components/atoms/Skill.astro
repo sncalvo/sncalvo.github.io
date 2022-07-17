@@ -34,30 +34,30 @@ const { icon, name, description, thumbnail } = Astro.props;
 	<div class="flip h-full w-full">
 		<div class="transition-all ease-in-out delay-100 duration-300 flip-content border-2 border-secondary-500 rounded w-full h-full">
 			<div class="grid grid-rows-6 grid-flow-col grid-cols-1 gap-0 flip-front bg-primary-400 px-2">
-				<div class="row-span-1 flex flex-row text-center gap-1 items-center">
+				<div class="row-span-1 flex flex-row text-center gap-1 items-center p-2">
           <Icon name={icon} height="100%" />
 
 					<h3 class="text-xl text-center font-medium">{name}</h3>
 				</div>
 
-				<div class="row-span-4">
-					<img src={thumbnail} class="w-full h-full object-contain bg-secondary-500 rounded" alt={thumbnail}/>
+				<div class="row-span-4 flex justify-center bg-secondary-500 rounded p-4">
+					<Icon name={thumbnail} height="100%" />
 				</div>
 
-				<div class="row-span-1 flex flex-row text-center gap-1 items-center rotate-180">
+				<div class="row-span-1 flex flex-row text-center gap-1 items-center rotate-180 p-2">
 					<Icon name={icon} height="100%" />
 
 					<h3 class="text-xl text-center font-medium">{name}</h3>
 				</div>
 			</div>
-			<div class="flip-back bg-primary-400 grid grid-rows-6 grid-flow-col gap-0 p-2">
-				<div class="row-span-1">
+			<div class="flip-back bg-primary-400 grid grid-rows-6 grid-flow-col gap-0 px-2">
+				<div class="row-span-1 p-2">
           <Icon name={icon} height="100%" />
         </div>
 
 				<h3 class="text-md font-medium text-left row-span-4">{description}</h3>
 
-        <div class="row-span-1 rotate-180">
+        <div class="row-span-1 rotate-180 p-2">
           <Icon name={icon} height="100%" />
         </div>
 			</div>
