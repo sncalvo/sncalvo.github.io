@@ -22,40 +22,27 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex flex-col gap-2" id="Contact">
-      <h1 className="text-3xl text-secondary-500 mb-2">Contact:</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="flex flex-col space-y-2 p-2 border rounded border-secondary-500 relative">
-          <label htmlFor="email" className="text-secondary-500">
-            Email
-          </label>
-          <input
-            id="email"
-            type="email"
-            value={emailInfo().email}
-            onChange={(e) => setEmailInfo((prevState) => ({ ...prevState, email: e.target.value }))}
-            className="w-full p-2 border rounded border-secondary-500 text-secondary-500 bg-transparent"
-          />
-          <label htmlFor="message" className="text-secondary-500">
-            Message
-          </label>
-          <textarea
-            id="message"
-            value={emailInfo().message}
-            onChange={(e) =>
-              setEmailInfo((prevState) => ({ ...prevState, message: e.target.value }))
-            }
-            className="w-full p-2 border rounded border-secondary-500 text-secondary-500 bg-transparent"
-          />
-          <button
-            type="submit"
-            className="w-full hover:text-secondary-500 text-white p-2 border rounded border-secondary-500 bg-secondary-500 focus:outline-double transition-all duration-300 delay-100 hover:bg-white shadow shadow-secondary-500"
-          >
-            Send
-          </button>
-        </div>
-      </form>
-      {error && <p className="bg-red-500 text-white">{error}</p>}
+    <div className="flex flex-col gap-2 items-center justify-center" id="Contact">
+      <div class="mb-4 flex items-center justify-center gap-4 w-full">
+        <div class="flex-grow border-t border-gray-400 opacity-50" />
+
+        <h2 className="text-3xl text-secondary-500">Contact</h2>
+
+        <div class="flex-grow border-t border-gray-400 opacity-50" />
+      </div>
+
+      <p class="text-center text-white-300 text-lg w-3/4 md:w-1/2 mb-4">
+        Although I am currently not looking for any new opportunities, we can still talk and get to
+        know each other. I will try my best to get back to you!
+      </p>
+      <a
+        href="mailto:sncalvo5@gmail.com"
+        className="primary-actionable"
+        rel="noopener noreferrer"
+        target="mailme"
+      >
+        Say Hi!
+      </a>
     </div>
   );
 }

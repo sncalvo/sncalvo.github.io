@@ -2,7 +2,11 @@
 const { description } = Astro.props;
 ---
 <div class="flex flex-col text-white gap-2" id="About">
-	<h2 class="text-secondary-500 text-3xl mb-2">About:</h2>
+	<div class="mb-2 flex items-center justify-center gap-4">
+		<div class="flex-grow border-t border-gray-400 opacity-50" />
+		<h2 class="text-secondary-500 text-3xl">About</h2>
+	</div>
+
 	{description.split('\n').filter((line) => line.trim()).map((line) => (
 		<p class="text-lg">
 			{line}
