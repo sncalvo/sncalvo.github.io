@@ -4,6 +4,7 @@ import Presentation from '../components/molecules/Presentation.astro';
 import SkillSet from '../components/molecules/SkillSet.astro';
 import About from '../components/molecules/About.astro';
 import TechSet from '../components/molecules/TechSet.astro';
+import Footer from '../components/molecules/Footer.astro';
 
 import Menu from '../components/molecules/Menu.jsx';
 import Contact from '../components/molecules/Contact.jsx';
@@ -70,6 +71,24 @@ const techs = [
     icon: 'simple-icons:amazonaws',
   },
 ];
+
+const socialMediaLinks = [
+  {
+    name: 'Github',
+    icon: 'simple-icons:github',
+    url: 'https://github.com/sncalvo/'
+  },
+  {
+    name: 'LinkedIn',
+    icon: 'simple-icons:linkedin',
+    url: 'https://www.linkedin.com/in/santiago-calvo-vello/'
+  },
+  {
+    name: 'Twitter',
+    icon: 'simple-icons:twitter',
+    url: 'https://twitter.com/SantiCalvoVello'
+  },
+];
 ---
 <html lang="en">
 <head>
@@ -95,7 +114,7 @@ const techs = [
         place="Eagerworks"
       />
 
-      <div class="p-4 md:p-8 flex flex-col gap-3">
+      <div class="p-4 md:p-8 flex flex-col gap-10">
         <SkillSet skills={skills} />
 
         <About description={description} />
@@ -103,8 +122,12 @@ const techs = [
         <TechSet techs={techs} />
 
         <Contact client:visible />
+
       </div>
+
     </main>
   </div>
+
+  <Footer links={socialMediaLinks} />
 </body>
 </html>

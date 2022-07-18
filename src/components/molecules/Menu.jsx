@@ -17,7 +17,7 @@ export default function SolidCounter() {
   return (
     <div class="fixed z-10 p-3">
       <button
-        class="transition-all rounded duration-300 delay-100 text-secondary-500 hover:text-white w-10 h-10 relative focus:outline-secondary-500 focus:outline-4 border-secondary-500 border-2 hover:bg-secondary-500 hover:border-0"
+        class="transition-all rounded duration-300 delay-100 text-secondary-500 hover:text-white w-10 h-10 relative focus:outline-secondary-500 focus:outline-4 border-secondary-500 border bg-primary-500 hover:bg-secondary-500 hover:border-0 shadow shadow-secondary-500"
         type="button"
         onClick={toggle}
       >
@@ -51,7 +51,7 @@ export default function SolidCounter() {
           }}
         >
           <div class="absolute left-2 top-2 bottom-0 right-0 bg-primary-500 blur-sm z-10" />
-          <ul class="flex flex-col space-y-2 p-2 border-2 rounded border-secondary-500 z-20 relative">
+          <ul class="flex flex-col space-y-2 p-2 border rounded border-secondary-500 z-20 relative">
             <PageLink name="Presentation" id="Presentation" />
             <PageLink name="Skill Set" id="SkillSet" />
             <PageLink name="About" id="About" />

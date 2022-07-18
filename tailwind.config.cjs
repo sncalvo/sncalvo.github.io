@@ -17,12 +17,12 @@ module.exports = {
           500: '#011627',
         },
         secondary: {
-          DEFAULT: '#FFF0DC',
-          100: '#FFF0DC',
-          200: '#FFE4BE',
-          300: '#FFCF8E',
-          400: '#FFB754',
-          500: '#FF9F1C',
+          DEFAULT: '#f0c0d6',
+          100: '#f0c0d6',
+          200: '#ed9ac0',
+          300: '#f562a5',
+          400: '#f53b90',
+          500: '#F72585',
         },
         tertiary: {
           DEFAULT: '#41EAD4',

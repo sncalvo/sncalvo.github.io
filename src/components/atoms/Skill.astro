@@ -32,8 +32,8 @@ const { icon, name, description, thumbnail } = Astro.props;
 
 <div class="flex flex-col rounded-md items-center gap-5 h-80 text-white">
 	<div class="flip h-full w-full">
-		<div class="transition-all ease-in-out delay-100 duration-300 flip-content border-2 border-secondary-500 rounded w-full h-full">
-			<div class="grid grid-rows-6 grid-flow-col grid-cols-1 gap-0 flip-front bg-primary-400 px-2">
+		<div class="transition-all ease-in-out delay-100 duration-300 flip-content border border-secondary-500 rounded w-full h-full">
+			<div class="grid grid-rows-6 grid-flow-col grid-cols-1 gap-0 flip-front bg-primary-400 px-2 shadow-inner shadow-secondary-500">
 				<div class="row-span-1 flex flex-row text-center gap-1 items-center p-2">
           <Icon name={icon} height="100%" />
 
@@ -50,7 +50,7 @@ const { icon, name, description, thumbnail } = Astro.props;
 					<h3 class="text-md text-center font-medium">{name}</h3>
 				</div>
 			</div>
-			<div class="flip-back bg-primary-400 grid grid-rows-6 grid-flow-col gap-0 px-2">
+			<div class="flip-back bg-primary-400 grid grid-rows-6 grid-flow-col gap-0 px-2 shadow-inner shadow-secondary-500">
 				<div class="row-span-1 p-2">
           <Icon name={icon} height="100%" />
         </div>
