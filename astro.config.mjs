@@ -1,4 +1,5 @@
 import solid from '@astrojs/solid-js';
+import vercel from '@astrojs/vercel/edge';
 
 export default {
   // projectRoot: '.',     // Where to resolve all URLs relative to. Useful if you have a monorepo project.
@@ -17,4 +18,5 @@ export default {
       external: ['svgo'],
     },
   },
+  adapter: vercel(),
 };

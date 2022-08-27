@@ -1,0 +1,33 @@
+---
+import Common from '../../layouts/Common.astro';
+
+import Menu from '../../components/molecules/Menu';
+import BlogsList from '../../components/molecules/BlogsList.astro';
+
+// TODO: Change to server side rendering
+const blog =
+  {
+    id: 1,
+    title: 'Santiago Calvo',
+    content: 'Santiago Calvo is a software developer and a web developer. <p>HOLA</p> TODO TRANQUI?',
+    thumbnail: 'http://store-images.s-microsoft.com/image/apps.44472.14266069062940839.7622a220-e3b7-47fe-9320-b2106621e5cb.dd5f8cb2-c6d4-4930-b7dd-81d9c9385116',
+  }
+
+const { id } = Astro.params;
+
+---
+<Common title={blog.title} description={blog.content}>
+  <div class="overflow-x-hidden">
+    <Menu client:visible />
+
+    <div class="p-24">
+      <h1 class="text-4xl text-secondary-500 mb-10">{blog.title}</h1>
+
+      <div class="text-white-100 p-3 rounded border border-secondary-500">
+        <Fragment set:html={blog.content} />
+      </div>
+
+    </div>
+
+  </div>
+</Common>

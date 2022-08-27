@@ -1,0 +1,21 @@
+---
+const {
+  blog: {
+    id,
+    title,
+    content,
+    thumbnail,
+  }
+} = Astro.props;
+
+const contentBeginning = content.substring(0, 100);
+---
+<li>
+  <a class="text-secondary-500 flex items-center h-24 gap-3 shadow shadow-secondary-500 hover:shadow-white-500 animation-all duration-300 delay-100 p-3 rounded hover:bg-primary-400" href={`/blogs/${id}`}>
+    <img class="object-cover h-full rounded" src={thumbnail} />
+    <div>
+      <h1 class="text-lg flex-grow">{title}</h1>
+      <p class="text-sm text-secondary-200">{contentBeginning}</p>
+    </div>
+  </a>
+</li>

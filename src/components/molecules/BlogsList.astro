@@ -1,0 +1,14 @@
+---
+import Blog from '../atoms/Blog.astro';
+
+const { blogs } = Astro.props;
+---
+<ul class="flex flex-col">
+  {
+    blogs.map((blog) => (
+      <Blog
+        blog={blog}
+      />
+    ))
+  }
+</ul>
