@@ -1,14 +1,10 @@
 ---
+import { type BlogPost } from '@prisma/client';
 import Blog from '../atoms/Blog.astro';
 
-const { blogs } = Astro.props;
+const { blogs } = Astro.props as { blogs: BlogPost[] };
 ---
-<ul class="flex flex-col">
-  {
-    blogs.map((blog) => (
-      <Blog
-        blog={blog}
-      />
-    ))
-  }
+
+<ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
+  {blogs.map((blog) => <Blog blog={blog} />)}
 </ul>

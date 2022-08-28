@@ -1,21 +1,27 @@
 ---
-const {
-  blog: {
-    id,
-    title,
-    content,
-    thumbnail,
-  }
-} = Astro.props;
+import { type BlogPost } from '@prisma/client';
 
-const contentBeginning = content.substring(0, 100);
+const {
+  blog: { id, title, content, thumbnail, link },
+} = Astro.props as { blog: BlogPost };
+
+const contentBeginning = content.replace(/<[^>]*>?/gm, '').substring(0, 75) + '...';
 ---
+
 <li>
-  <a class="text-secondary-500 flex items-center h-24 gap-3 shadow shadow-secondary-500 hover:shadow-white-500 animation-all duration-300 delay-100 p-3 rounded hover:bg-primary-400" href={`/blogs/${id}`}>
-    <img class="object-cover h-full rounded" src={thumbnail} />
-    <div>
+  <a
+    class="text-secondary-500 grid grid-cols-3 gap-3 h-40 shadow shadow-secondary-500 hover:shadow-white-500 animation-all duration-300 delay-100 p-3 rounded hover:bg-primary-400"
+    href={link || `/blogs/${id}`}
+  >
+    <img
+      class="object-cover h-full w-full rounded col-span-1 overflow-hidden"
+      src={thumbnail}
+      alt={`${title} image`}
+    />
+
+    <div class="col-span-2">
       <h1 class="text-lg flex-grow">{title}</h1>
-      <p class="text-sm text-secondary-200">{contentBeginning}</p>
+      <p class="text-xs text-secondary-200">{contentBeginning}</p>
     </div>
   </a>
 </li>

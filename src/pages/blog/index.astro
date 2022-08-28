@@ -3,33 +3,33 @@ import Common from '../../layouts/Common.astro';
 
 import Menu from '../../components/molecules/Menu';
 import BlogsList from '../../components/molecules/BlogsList.astro';
-
+import { getAll } from '../../services/blogs';
 
 const title = 'Santiago Calvo blogs';
 const description = `
   Santiago Calvo's blogs.
   `;
 
-
 // TODO: Change to server side rendering
-const blogs = [
-  {
-    id: 1,
-    title: 'Santiago Calvo',
-    content: 'Santiago Calvo is a software developer and a web developer.',
-    thumbnail: 'http://store-images.s-microsoft.com/image/apps.44472.14266069062940839.7622a220-e3b7-47fe-9320-b2106621e5cb.dd5f8cb2-c6d4-4930-b7dd-81d9c9385116',
-  }
-];
+// const blogs = [
+//   {
+//     id: 1,
+//     title: 'Santiago Calvo',
+//     content: 'Santiago Calvo is a software developer and a web developer.',
+//     thumbnail: 'http://store-images.s-microsoft.com/image/apps.44472.14266069062940839.7622a220-e3b7-47fe-9320-b2106621e5cb.dd5f8cb2-c6d4-4930-b7dd-81d9c9385116',
+//   }
+// ]
+const blogs = await getAll();
 ---
+
 <Common title={title} description={description}>
   <div class="overflow-x-hidden">
     <Menu client:visible />
 
-    <div class="p-24">
+    <div class="pt-16 p-4 md:p-24">
       <h1 class="text-4xl text-secondary-500 mb-10">Blog posts</h1>
 
-      <BlogsList blogs={blogs}/>
+      <BlogsList blogs={blogs} />
     </div>
-
   </div>
 </Common>
