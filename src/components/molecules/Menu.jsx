@@ -15,7 +15,7 @@ export default function SolidCounter() {
   const toggle = () => setOpen(!open());
 
   return (
-    <div class="fixed z-10 p-3">
+    <div class="fixed z-20 p-3">
       <button
         class="transition-all rounded duration-300 delay-100 text-secondary-500 hover:text-white w-10 h-10 relative focus:outline-secondary-500 focus:outline-4 border-secondary-500 border bg-primary-500 hover:bg-secondary-500 hover:border-0 shadow shadow-secondary-500"
         type="button"
