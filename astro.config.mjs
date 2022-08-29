@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 import solid from '@astrojs/solid-js';
-import vercel from '@astrojs/vercel/edge';
+import vercel from '@astrojs/vercel/serverless';
 
 // export default {
 //   // projectRoot: '.',     // Where to resolve all URLs relative to. Useful if you have a monorepo project.
