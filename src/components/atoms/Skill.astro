@@ -1,66 +1,72 @@
 ---
-import { Icon } from 'astro-icon'
+import { Icon } from 'astro-icon';
 
 const { icon, name, description, thumbnail } = Astro.props;
 ---
+
 <style>
-.flip {
-  /* width: 150px;
+  .flip {
+    /* width: 150px;
   height: 150px; */
-  text-align: center;
-  perspective: 600px;
-}
-.flip-content {
-  transform-style: preserve-3d;
-}
-.flip:hover .flip-content {
-  transform: rotateY(180deg);
-  transition: transform 0.3s;
-}
+    text-align: center;
+    perspective: 600px;
+  }
+  .flip-content {
+    transform-style: preserve-3d;
+  }
+  .flip:hover .flip-content {
+    transform: rotateY(180deg);
+    transition: transform 0.3s;
+  }
 
-.flip-front, .flip-back {
-	@apply absolute h-full w-full;
-	backface-visibility: hidden;
-}
+  .flip-front,
+  .flip-back {
+    @apply absolute h-full w-full;
+    backface-visibility: hidden;
+  }
 
-.flip-back {
-  transform: rotateY(180deg);
-}
+  .flip-back {
+    transform: rotateY(180deg);
+  }
 </style>
 
-
-
 <div class="flex flex-col rounded-md items-center gap-5 h-80 text-white">
-	<div class="flip h-full w-full">
-		<div class="transition-all ease-in-out delay-100 duration-300 flip-content border border-secondary-500 rounded w-full h-full">
-			<div class="grid grid-rows-6 grid-flow-col grid-cols-1 gap-0 flip-front bg-primary-400 px-2 shadow-inner shadow-secondary-500">
-				<div class="row-span-1 flex flex-row text-center gap-1 items-center p-2">
+  <div class="flip h-full w-full">
+    <div
+      class="transition-all ease-in-out delay-100 duration-300 flip-content border border-secondary-500 rounded w-full h-full"
+    >
+      <div
+        class="grid grid-rows-6 grid-flow-col grid-cols-1 gap-0 flip-front bg-primary-400 px-2 shadow-inner shadow-secondary-500"
+      >
+        <div class="row-span-1 flex flex-row text-center gap-1 items-center p-2">
           <Icon name={icon} height="100%" />
 
-					<h3 class="text-md text-center font-medium">{name}</h3>
-				</div>
+          <h3 class="text-md text-center font-medium">{name}</h3>
+        </div>
 
-				<div class="row-span-4 flex justify-center bg-secondary-500 rounded pt-4">
-					<Icon name={thumbnail} height="100%" />
-				</div>
+        <div class="row-span-4 flex justify-center bg-secondary-500 rounded pt-4">
+          <Icon name={thumbnail} height="100%" />
+        </div>
 
-				<div class="row-span-1 flex flex-row text-center gap-1 items-center rotate-180 p-2">
-					<Icon name={icon} height="100%" />
+        <div class="row-span-1 flex flex-row text-center gap-1 items-center rotate-180 p-2">
+          <Icon name={icon} height="100%" />
 
-					<h3 class="text-md text-center font-medium">{name}</h3>
-				</div>
-			</div>
-			<div class="flip-back bg-primary-400 grid grid-rows-6 grid-flow-col gap-0 px-2 shadow-inner shadow-secondary-500">
-				<div class="row-span-1 p-2">
+          <p class="text-md text-center font-medium">{name}</p>
+        </div>
+      </div>
+      <div
+        class="flip-back bg-primary-400 grid grid-rows-6 grid-flow-col gap-0 px-2 shadow-inner shadow-secondary-500"
+      >
+        <div class="row-span-1 p-2">
           <Icon name={icon} height="100%" />
         </div>
 
-				<h3 class="text-md font-medium text-left row-span-4">{description}</h3>
+        <p class="text-md font-medium text-left row-span-4">{description}</p>
 
         <div class="row-span-1 rotate-180 p-2">
           <Icon name={icon} height="100%" />
         </div>
-			</div>
-		</div>
-	</div>
+      </div>
+    </div>
+  </div>
 </div>

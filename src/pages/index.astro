@@ -11,8 +11,8 @@ import Menu from '../components/molecules/Menu.jsx';
 
 import '../styles/global.css';
 
-let title = 'Santiago Calvo. Full Stack developer.';
-let description = `
+const title = 'Santiago Calvo. Full Stack developer.';
+const description = `
 I am a Full Stack web developer with a passion for building beautiful, responsive websites to \
 help your business grow and deliver great user experiences.
 
@@ -101,6 +101,8 @@ const socialMediaLinks = [
 
 <Common title={title} description={description.substring(0, description.indexOf('.'))}>
   <div class="overflow-x-hidden">
+    <h1 class="hidden">{title}</h1>
+
     <Menu client:visible />
     <main>
       <Presentation

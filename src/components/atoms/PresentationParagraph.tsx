@@ -28,10 +28,10 @@ export default function PresentationParagraph({
     <div>
       <div class="font-semibold text-sm md:text-2xl text-white">
         <div>
-          <h1>
+          <p>
             <span class="text-secondary-500">const</span> name <span class="text-red-400">=</span>{' '}
             <span class="text-green-500 capitalize">'{name}'</span>;
-          </h1>
+          </p>
           <p>
             <span class="text-secondary-500">let</span> age <span class="text-red-400">=</span>{' '}
             <span class="text-green-500 capitalize">'{age}'</span>;
