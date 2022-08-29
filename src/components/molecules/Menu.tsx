@@ -1,6 +1,11 @@
-import { createSignal } from 'solid-js';
+import { type Component, createSignal } from 'solid-js';
 
-const PageLink = ({ name, link }) => (
+interface PageLinkProps {
+  name: string;
+  link: string;
+}
+
+const PageLink: Component<PageLinkProps> = ({ name, link }) => (
   <li class="flex z-10">
     <a href={link} class="primary-actionable w-full">
       <span class="sr-only">{name}</span>
@@ -9,7 +14,7 @@ const PageLink = ({ name, link }) => (
   </li>
 );
 
-export default function SolidCounter() {
+export default function Menu() {
   const [open, setOpen] = createSignal(false);
 
   const toggle = () => setOpen(!open());

@@ -1,4 +1,4 @@
-function getAge(dateString) {
+function getAge(dateString: string) {
   var today = new Date();
   var birthDate = new Date(dateString);
   var age = today.getFullYear() - birthDate.getFullYear();
@@ -9,7 +9,19 @@ function getAge(dateString) {
   return age;
 }
 
-export default function PresentationParagraph({ name, position, birthDate, place }) {
+interface PresentationParagraphProps {
+  name: string;
+  position: string;
+  birthDate: string;
+  place: string;
+}
+
+export default function PresentationParagraph({
+  name,
+  position,
+  birthDate,
+  place,
+}: PresentationParagraphProps) {
   const age = getAge(birthDate);
 
   return (
