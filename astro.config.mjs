@@ -9,7 +9,7 @@ export default defineConfig({
   integrations: [
     solid(),
     sitemap({
-      customPages: ['https://scalvo.dev/', 'https://scalvo.dev/blog'],
+      customPages: ['https://scalvo.dev', 'https://scalvo.dev/blog'],
     }),
   ],
   vite: {
