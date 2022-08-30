@@ -6,7 +6,12 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://scalvo.dev',
-  integrations: [solid(), sitemap()],
+  integrations: [
+    solid(),
+    sitemap({
+      customPages: ['https://scalvo.dev/', 'https://scalvo.dev/blog'],
+    }),
+  ],
   vite: {
     ssr: {
       external: ['svgo'],
