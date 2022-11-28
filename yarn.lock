@@ -80,12 +80,12 @@
     uvu "^0.5.0"
     vfile-message "^3.0.0"
 
-"@astrojs/partytown@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/partytown/-/partytown-1.0.0.tgz#31cc6e43c546b96422e10f3279e9e2a9ebba3852"
-  integrity sha512-rco5tOtBmmZ7mpoHFyARrMb5yKVJPwLghN9lFvl+R867E+0xRp6ZzP5o7pMySgZCUq093qzd1bkAsVS2I/8gpg==
+"@astrojs/partytown@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@astrojs/partytown/-/partytown-1.0.2.tgz#e31f44e366b070815c68c7ede9fe567b8c75316c"
+  integrity sha512-+pUjLxdp0SYqUO+X+FjFN95KxK7w4Rs5gIMQ7scKUWd2073D3/5hTlij9qNmX5Bk/tFHUfTivKIZ5p233Lpa9Q==
   dependencies:
-    "@builder.io/partytown" "^0.4.5"
+    "@builder.io/partytown" "^0.7.1"
     mrmime "^1.0.0"
 
 "@astrojs/prism@^1.0.0":
@@ -364,10 +364,10 @@
     "@babel/helper-validator-identifier" "^7.18.6"
     to-fast-properties "^2.0.0"
 
-"@builder.io/partytown@^0.4.5":
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.4.5.tgz#3c85e25a7102336b7da4c71a46e77722da052e74"
-  integrity sha512-HcHlmMYSpOxfJ0lFVxgZrvgIjz1Q8knlGuWkBpvjIp68j+xVWg969+sn7BCfyKhcGaYlnVOY/CEBHapQBcl0jw==
+"@builder.io/partytown@^0.7.1":
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.7.2.tgz#012d0dc5458af07079849f09567fcbf058a72d46"
+  integrity sha512-TmRHuN4gdsOJxBGsPPirJAMuXDm0o9cx9t5ltSson+F+K5ES3eNiBCxBGvSSkoEARvZ+kl1n7WVi+8qNyJdeAQ==
 
 "@emmetio/abbreviation@^2.2.3":
   version "2.2.3"
