@@ -72,6 +72,9 @@
   font-family: 'Fira Code', 'Courier New', Courier, monospace;
 }
 
+body {
+  @apply bg-primary-500;
+}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
