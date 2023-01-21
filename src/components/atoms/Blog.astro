@@ -1,9 +1,9 @@
 ---
-import { type BlogPost } from '@prisma/client';
+import type { Database } from "../../server/db/client"; 
 
 const {
   blog: { id, title, content, thumbnail, link },
-} = Astro.props as { blog: BlogPost };
+} = Astro.props as { blog: Database['public']['Tables']['BlogPost']['Row'] };
 
 const contentBeginning = content.replace(/<[^>]*>?/gm, '').substring(0, 75) + '...';
 ---
