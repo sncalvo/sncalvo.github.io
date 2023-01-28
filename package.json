@@ -13,7 +13,7 @@
     "@astrojs/partytown": "^1.0.2",
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/solid-js": "^1.2.3",
-    "@astrojs/vercel": "^1.0.1",
+    "@astrojs/vercel": "^2.4.0",
     "astro": "^1.1.1",
     "astro-icon": "sncalvo/astro-icon#main",
     "prisma": "^4.9.0",
