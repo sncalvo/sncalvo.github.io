@@ -1,5 +1,6 @@
 {
   "name": "@example/starter",
+  "type": "module",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -7,9 +8,13 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "astro": "astro",
     "postinstall": "prisma generate"
   },
   "devDependencies": {
+    "@prisma/client": "4.9.0"
+  },
+  "dependencies": {
     "@astrojs/partytown": "^1.0.3",
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/solid-js": "^2.0.0",
@@ -19,10 +24,7 @@
     "astro-icon": "sncalvo/astro-icon#main",
     "prisma": "^4.9.0",
     "solid-js": "^1.6.9",
-    "tailwindcss": "^3.2.4"
-  },
-  "dependencies": {
-    "@astrojs/image": "^0.13.0",
-    "@prisma/client": "4.9.0"
+    "tailwindcss": "^3.2.4",
+    "@astrojs/image": "^0.13.0"
   }
 }

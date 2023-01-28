@@ -7,9 +7,7 @@ import TechSet from '../components/molecules/TechSet.astro';
 import Footer from '../components/molecules/Footer.astro';
 import Contact from '../components/molecules/Contact.astro';
 
-import Menu from '../components/molecules/Menu.jsx';
-
-import '../styles/global.css';
+import Menu from '../components/molecules/Menu';
 
 const title = 'Santiago Calvo. Full Stack developer.';
 const description = `
@@ -103,7 +101,7 @@ const socialMediaLinks = [
   <div class="overflow-x-hidden">
     <h1 class="hidden">{title}</h1>
 
-    <Menu client:visible />
+    <!-- <Menu client:load /> -->
     <main>
       <Presentation
         name="Santiago Calvo"
