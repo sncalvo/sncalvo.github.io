@@ -10,17 +10,19 @@
     "postinstall": "prisma generate"
   },
   "devDependencies": {
-    "@astrojs/partytown": "^1.0.2",
+    "@astrojs/partytown": "^1.0.3",
     "@astrojs/sitemap": "^1.0.0",
-    "@astrojs/solid-js": "^1.2.3",
-    "@astrojs/vercel": "^1.0.1",
-    "astro": "^1.1.1",
+    "@astrojs/solid-js": "^2.0.0",
+    "@astrojs/tailwind": "^3.0.0",
+    "@astrojs/vercel": "^3.0.0",
+    "astro": "^2.0.0",
     "astro-icon": "sncalvo/astro-icon#main",
     "prisma": "^4.9.0",
     "solid-js": "^1.6.9",
     "tailwindcss": "^3.2.4"
   },
   "dependencies": {
+    "@astrojs/image": "^0.13.0",
     "@prisma/client": "4.9.0"
   }
 }
