@@ -1,4 +1,17 @@
 ---
-const { imageSrc } = Astro.props;
+import { Picture } from '@astrojs/image/components';
+
+const { imageSrc } = Astro.props as { imageSrc: string };
 ---
-<img class="absolute h-full w-full blur-lg object-cover" src={imageSrc} alt="code background image" />
+
+<div class="absolute h-full w-full">
+  <Picture
+    class="absolute h-full w-full blur-lg object-cover"
+    src={imageSrc}
+    sizes="(max-width: 1024px) 100vw, 800px"
+    alt="code background image"
+    background="blue"
+    widths={[822]}
+    aspectRatio={1.38}
+  />
+</div>

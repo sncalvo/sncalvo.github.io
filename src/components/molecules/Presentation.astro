@@ -4,12 +4,17 @@ import BackgroundImage from '../atoms/BackgroundImage.astro';
 
 const { name, birthDate, position, place } = Astro.props;
 ---
-<div
-	class="h-screen w-screen flex items-center justify-center"
-  id="Presentation"
->
-	<div class="z-10 p-5">
-		<PresentationParagraph client:visible name={name} birthDate={birthDate} position={position} place={place} />
-	</div>
-	<BackgroundImage imageSrc="/assets/background.webp" />
+
+<div class="h-screen w-full flex items-center justify-center" id="Presentation">
+  <div class="z-10 p-5">
+    <PresentationParagraph
+      client:visible
+      name={name}
+      birthDate={birthDate}
+      position={position}
+      place={place}
+    />
+  </div>
+
+  <BackgroundImage imageSrc="/assets/background.webp" />
 </div>

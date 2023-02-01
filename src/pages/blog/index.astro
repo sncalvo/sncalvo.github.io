@@ -16,7 +16,7 @@ const blogs = await getAll();
 
 <Common title={title} description={description}>
   <div class="overflow-x-hidden">
-    <Menu client:visible />
+    <Menu client:load />
 
     <div class="pt-16 p-4 md:p-24">
       <h1 class="text-4xl text-secondary-500 mb-10">Blog posts</h1>

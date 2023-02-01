@@ -3,10 +3,13 @@ import solid from '@astrojs/solid-js';
 import vercel from '@astrojs/vercel/serverless';
 import sitemap from '@astrojs/sitemap';
 import partytown from '@astrojs/partytown';
+import tailwind from '@astrojs/tailwind';
+
+import image from '@astrojs/image';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://scalvo.dev',
+  site: 'https://scalvo.dev/',
   integrations: [
     solid(),
     sitemap({
@@ -17,6 +20,8 @@ export default defineConfig({
         forward: ['dataLayer.push'],
       },
     }),
+    tailwind(),
+    image(),
   ],
   vite: {
     ssr: {

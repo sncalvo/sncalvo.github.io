@@ -9,18 +9,18 @@ const { id } = Astro.params;
 const blog = await get(id as string);
 ---
 
-<Common title={blog.title} description={blog.content}>
+<Common title={blog?.title} description={blog?.content}>
   <div class="overflow-x-hidden">
     <Menu client:visible />
 
     <div class="p-24">
-      <h1 class="text-4xl text-secondary-500 mb-10">{blog.title}</h1>
+      <h1 class="text-4xl text-secondary-500 mb-10">{blog?.title}</h1>
 
       <div class="text-white-100 p-3 rounded border border-secondary-500">
         <!-- <Markdown>
 
         </Markdown> -->
-        <Fragment set:html={blog.content} />
+        <Fragment set:html={blog?.content} />
       </div>
     </div>
   </div>
