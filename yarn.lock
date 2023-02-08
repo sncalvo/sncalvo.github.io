@@ -97,13 +97,13 @@
     sitemap "^7.1.1"
     zod "^3.17.3"
 
-"@astrojs/solid-js@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@astrojs/solid-js/-/solid-js-2.0.1.tgz#d794468fe9334970f5ddb3ac3a6a546a3540e314"
-  integrity sha512-xF5ZW2ZPmXPnZShPLymP/7WQ4M3kP+5gzr0T0FnsBdTFf5Sed7Rry+QIoqvf1/XA8DsJYBW3W+HrC2Gad0g/hg==
+"@astrojs/solid-js@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@astrojs/solid-js/-/solid-js-2.0.2.tgz#8b10026c5af87b8458bb3e7497f90f87a1eb05d8"
+  integrity sha512-fQMOfBcmvYHXJg8vR0LgoeBgrlLHrxnlzxxmPkDKrGPBRh9y3si2d/ChpMyMRL3ibAOqWTs7Xs5gOYqrFZbw3g==
   dependencies:
     babel-preset-solid "^1.4.2"
-    vitefu "^0.2.1"
+    vitefu "^0.2.4"
 
 "@astrojs/tailwind@^3.0.1":
   version "3.0.1"
@@ -3673,7 +3673,7 @@ vite@^4.0.3:
   optionalDependencies:
     fsevents "~2.3.2"
 
-vitefu@^0.2.1, vitefu@^0.2.4:
+vitefu@^0.2.4:
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/vitefu/-/vitefu-0.2.4.tgz#212dc1a9d0254afe65e579351bed4e25d81e0b35"
   integrity sha512-fanAXjSaf9xXtOOeno8wZXIhgia+CZury481LsDaV++lSvcU2R9Ch2bPh3PYFyoHW+w9LqAeYRISVQjUIew14g==
