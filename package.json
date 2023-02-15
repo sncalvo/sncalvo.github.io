@@ -24,7 +24,7 @@
     "astro-icon": "sncalvo/astro-icon#main",
     "prisma": "^4.9.0",
     "solid-js": "^1.6.10",
-    "tailwindcss": "^3.2.4",
+    "tailwindcss": "^3.2.6",
     "@astrojs/image": "^0.14.0"
   }
 }
