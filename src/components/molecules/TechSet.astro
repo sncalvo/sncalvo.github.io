@@ -1,18 +1,24 @@
 ---
+import type TechType from '../../types/Tech';
 import Tech from '../atoms/Tech.astro';
+
+interface Props {
+  techs: TechType[];
+}
 
 const { techs } = Astro.props;
 ---
+
 <div>
-	<div class="mb-10 flex items-center justify-center gap-4">
-		<h2 class="text-white text-3xl">Main <span class="text-secondary-500 shadow-secondary-500">techs</span></h2>
+  <div class="mb-10 flex items-center justify-center gap-4">
+    <h2 class="text-white text-3xl">
+      Main <span class="text-secondary-500 shadow-secondary-500">techs</span>
+    </h2>
 
-		<div class="flex-grow border-t border-gray-400 opacity-50" />
-	</div>
+    <div class="flex-grow border-t border-gray-400 opacity-50"></div>
+  </div>
 
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-3" id="TechSet">
-		{techs.map((tech) => (
-			<Tech {...tech} />
-		))}
-	</div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-3" id="TechSet">
+    {techs.map((tech) => <Tech {...tech} />)}
+  </div>
 </div>

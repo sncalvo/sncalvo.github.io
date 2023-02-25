@@ -1,7 +1,11 @@
 ---
 import { Picture } from '@astrojs/image/components';
 
-const { imageSrc } = Astro.props as { imageSrc: string };
+interface Props {
+  imageSrc: string;
+}
+
+const { imageSrc } = Astro.props;
 ---
 
 <div class="absolute h-full w-full">

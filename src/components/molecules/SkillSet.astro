@@ -1,19 +1,23 @@
 ---
+import type SkillType from '../../types/Skill';
 import Skill from '../atoms/Skill.astro';
+
+interface Props {
+  skills: SkillType[];
+}
 
 const { skills } = Astro.props;
 ---
-<div id="SkillSet">
-	<div class="mb-4 flex items-center justify-center gap-4">
-		<h2 class="text-3xl text-white">
-			These are my <span class="text-secondary-500">skills</span>
-		</h2>
 
-		<div class="flex-grow border-t border-gray-400 opacity-50" />
-	</div>
-	<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-		{skills.map((skill) => (
-			<Skill {...skill} />
-		))}
-	</div>
+<div id="SkillSet">
+  <div class="mb-4 flex items-center justify-center gap-4">
+    <h2 class="text-3xl text-white">
+      These are my <span class="text-secondary-500">skills</span>
+    </h2>
+
+    <div class="flex-grow border-t border-gray-400 opacity-50"></div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+    {skills.map((skill) => <Skill {...skill} />)}
+  </div>
 </div>
