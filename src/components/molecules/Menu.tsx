@@ -61,6 +61,7 @@ export default function Menu() {
             <PageLink name="Skill Set" link="/#SkillSet" />
             <PageLink name="About" link="/#About" />
             <PageLink name="Tech Set" link="/#TechSet" />
+            <PageLink name="Experience" link="/#Experiences" />
             <PageLink name="Blog" link="/blog" />
             <PageLink name="Contact" link="/#Contact" />
           </ul>

@@ -1,15 +1,23 @@
 ---
 import { Icon } from 'astro-icon';
 
-interface Props {
-  links: {
-    url: string;
-    icon: string;
-    name: string;
-  }[];
-}
-
-const { links } = Astro.props;
+const links = [
+  {
+    name: 'Github',
+    icon: 'simple-icons:github',
+    url: 'https://github.com/sncalvo/',
+  },
+  {
+    name: 'LinkedIn',
+    icon: 'simple-icons:linkedin',
+    url: 'https://www.linkedin.com/in/santiago-calvo-vello/',
+  },
+  {
+    name: 'Twitter',
+    icon: 'simple-icons:twitter',
+    url: 'https://twitter.com/santi_c_dev',
+  },
+];
 ---
 
 <footer class="p-4 flex flex-col gap-4">

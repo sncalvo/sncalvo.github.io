@@ -1,12 +1,32 @@
 ---
-import type TechType from '../../types/Tech';
 import Tech from '../atoms/Tech.astro';
 
-interface Props {
-  techs: TechType[];
-}
-
-const { techs } = Astro.props;
+const techs = [
+  {
+    name: 'Typescript',
+    description:
+      'Typescript is a great language to build your app with. It is a superset of JavaScript that aids in stability and scalability of your project.',
+    icon: 'simple-icons:typescript',
+  },
+  {
+    name: 'React',
+    description:
+      "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. With it's great state management one can build complex applications that allow great interactive experiences for users.",
+    icon: 'simple-icons:react',
+  },
+  {
+    name: 'Ruby on Rails',
+    description:
+      'Building your backend with rails is a great way to get your app up and running in no time. It is a framework that allows you to build a robust backend with a simple API.',
+    icon: 'simple-icons:rubyonrails',
+  },
+  {
+    name: 'AWS',
+    description:
+      'Languages, libraries, and frameworks still need somewhere to run. AWS is a reliable and scalable cloud platform to host your applications.',
+    icon: 'simple-icons:amazonaws',
+  },
+];
 ---
 
 <div>

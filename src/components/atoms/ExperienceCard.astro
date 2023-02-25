@@ -1,0 +1,47 @@
+---
+import { Icon } from 'astro-icon';
+import type Experience from '../../types/Experience';
+
+interface Props {
+  experience: Experience;
+}
+
+const {
+  experience: { title, company, date, description, image, link },
+} = Astro.props;
+---
+
+<div class="flex text-white" id="Experience">
+  <div class="bg-primary-400 shadow-lg rounded-lg p-4">
+    <div class="flex justify-between">
+      <a
+        href={link}
+        class="flex items-start justify-start -translate-x-5 lg:-translate-x-9 -translate-y-6 lg:-translate-y-9 w-24 h-24"
+      >
+        <Icon
+          name={image}
+          height="100%"
+          class="fill-secondary-500 hover:fill-white hover:scale-110 transition-all text-secondary-500"
+        />
+      </a>
+
+      <div>
+        <h2 class="text-end text-xl font-bold">{title} - {company}</h2>
+        <p class="text-end text-xs">{date}</p>
+      </div>
+    </div>
+    <div class="flex flex-col gap-2 mt-3">
+      {
+        description.map((description) => (
+          <div class="flex gap-2 justify-start items-start">
+            <div class="h-3">
+              <span class="sr-only">{company} Link</span>
+              <Icon name="simple-icons:acclaim" height="100%" class="rotate-90" />
+            </div>
+            <p class="text-xs">{description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+---
+import ExperienceCard from '../atoms/ExperienceCard.astro';
+
+const experiences = [
+  {
+    title: 'Fullstack Developer',
+    company: 'eagerworks',
+    date: '2019 - Present',
+    description: [
+      `I started working at Eagerworks in 2019 as a Jr Fullstack developer. My time was spent learning and building products for startups. I have a very proactive personality, so very early in my career, I started conversing with clients and making technical decisions for the product.`,
+      `Started with small projects of one-person teams and incrementally larger teams, from one to two, from two to three, and then the largest team, five. Most of them with a leadership role.`,
+      `I have now also started working on a project manager and technical leader role helping the founders transition to a manager role for more high-level responsibilities. At the same time, I take care of projects, technical difficulties, and decisions on the stack that the company will use in the future, primarily focused on frontend and full-stack projects.
+`,
+    ],
+    image: 'eagerworks-logo',
+    link: 'https://eagerworks.com/',
+  },
+];
+---
+
+<div id="Experiences">
+  <div class="mb-4 flex items-center justify-center gap-4">
+    <div class="flex-grow border-t border-gray-400 opacity-50"></div>
+    <h2 class="text-3xl text-white">
+      Work <span class="text-secondary-500">experiences</span>
+    </h2>
+  </div>
+  <div class="mt-10">
+    {experiences.map((experience) => <ExperienceCard experience={experience} />)}
+  </div>
+</div>
