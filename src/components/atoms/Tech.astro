@@ -10,18 +10,20 @@ const { name, icon, description } = Astro.props;
 <button
   class="transition-all duration-150 rounded group text-white bg-primary-400 p-5 shadow shadow-secondary-500 hover:max-h-full flex flex-col items-start"
 >
-  <div class="flex flex-row items-center py-2">
+  <div class="flex flex-row items-center py-2 group-hover:text-secondary-400 transition-all">
     <div class="mr-5">
-      <div class="transition-all duration-150 flex group-focus:rotate-90">
+      <div class="transition-all duration-150 flex group-hover:rotate-90">
         <Icon name="tabler:chevron-right" height={26} />
       </div>
     </div>
     <h3 class="text-xl">{name}</h3>
   </div>
   <div
-    class="max-h-0 overflow-hidden group-focus:max-h-40 duration-300 grid grid-cols-6 gap-2 justify-start items-center text-start"
+    class="max-h-0 overflow-hidden group-hover:max-h-40 duration-300 grid grid-cols-6 gap-2 justify-start items-center text-start"
   >
-    <Icon name={icon} class="col-span-1" />
+    <div class="col-span-1">
+      <Icon name={icon} class="w-full" />
+    </div>
     <p class="text-sm col-span-5">{description}</p>
   </div>
 </button>
