@@ -103,3 +103,7 @@ body {
 .primary-actionable {
   @apply text-secondary-500 hover:text-white p-2 border rounded border-secondary-500 hover:bg-secondary-500 focus:outline-double transition-all duration-300 delay-100;
 }
+
+html {
+  scroll-behavior: smooth;
+}
