@@ -1,5 +1,8 @@
 ---
 import { Icon } from 'astro-icon';
+import type Skill from '../../types/Skill';
+
+interface Props extends Skill {}
 
 const { icon, name, description, thumbnail } = Astro.props;
 ---

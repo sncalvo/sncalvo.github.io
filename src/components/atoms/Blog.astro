@@ -1,10 +1,14 @@
 ---
 import { Picture } from '@astrojs/image/components';
-import { type BlogPost } from '@prisma/client';
+import type { BlogPost } from '@prisma/client';
+
+interface Props {
+  blog: BlogPost;
+}
 
 const {
   blog: { id, title, content, thumbnail, link },
-} = Astro.props as { blog: BlogPost };
+} = Astro.props;
 
 const contentBeginning = content.replace(/<[^>]*>?/gm, '').substring(0, 75) + '...';
 ---
