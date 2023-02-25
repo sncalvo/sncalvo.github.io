@@ -7,9 +7,10 @@ interface PageLinkProps {
 
 const PageLink: Component<PageLinkProps> = ({ name, link }) => (
   <li class="flex z-10">
-    <a href={link} class="primary-actionable w-full">
+    <a href={link} class="primary-actionable w-full relative group">
       <span class="sr-only">{name}</span>
       <span>{name}</span>
+      <div class="h-full w-full border border-secondary-500 absolute opacity-0 rounded pointer-events-none top-0 left-0 group-hover:top-2 group-hover:left-2 group-hover:opacity-100 transition-all delay-200"></div>
     </a>
   </li>
 );
@@ -56,7 +57,7 @@ export default function Menu() {
           }}
         >
           <div class="absolute left-2 top-2 bottom-0 right-0 bg-primary-500 blur-sm z-10" />
-          <ul class="flex flex-col space-y-2 p-2 border rounded border-secondary-500 z-20 relative">
+          <ul class="flex flex-col space-y-4 pr-5 pl-3 py-3 border rounded border-secondary-500 z-20 relative overflow-hidden">
             <PageLink name="Presentation" link="/#Presentation" />
             <PageLink name="Skill Set" link="/#SkillSet" />
             <PageLink name="About" link="/#About" />

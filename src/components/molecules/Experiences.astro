@@ -21,9 +21,17 @@ const experiences = [
 <div id="Experiences">
   <div class="mb-4 flex items-center justify-center gap-4">
     <div class="flex-grow border-t border-gray-400 opacity-50"></div>
-    <h2 class="text-3xl text-white">
-      Work <span class="text-secondary-500">experiences</span>
-    </h2>
+
+    <a href="/#Experiences" class="group">
+      <h2 class="text-white text-3xl">
+        Work <span class="text-secondary-500 shadow-secondary-500 transition-all"
+          >experiences
+          <span
+            class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-secondary-500"
+          ></span>
+        </span>
+      </h2>
+    </a>
   </div>
   <div class="mt-10">
     {experiences.map((experience) => <ExperienceCard experience={experience} />)}

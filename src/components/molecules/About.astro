@@ -1,15 +1,31 @@
 ---
+interface Props {
+  description: string;
+}
+
 const { description } = Astro.props;
 ---
-<div class="flex flex-col text-white gap-2" id="About">
-	<div class="mb-2 flex items-center justify-center gap-4">
-		<div class="flex-grow border-t border-gray-400 opacity-50" />
-		<h2 class="text-secondary-500 text-3xl">About</h2>
-	</div>
 
-	{description.split('\n').filter((line) => line.trim()).map((line) => (
-		<p class="text-lg">
-			{line}
-		</p>
-	))}
+<div class="flex flex-col text-white gap-2" id="About">
+  <div class="mb-2 flex items-center justify-center gap-4">
+    <div class="flex-grow border-t border-gray-400 opacity-50"></div>
+
+    <a href="/#About" class="group">
+      <h2 class="text-white text-3xl">
+        <span class="text-secondary-500 shadow-secondary-500 transition-all"
+          >About
+          <span
+            class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-secondary-500"
+          ></span>
+        </span>
+      </h2>
+    </a>
+  </div>
+
+  {
+    description
+      .split('\n')
+      .filter((line) => line.trim())
+      .map((line) => <p class="text-lg">{line}</p>)
+  }
 </div>
