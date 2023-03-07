@@ -4,39 +4,52 @@ import Tech from '../atoms/Tech.astro';
 const techs = [
   {
     name: 'Typescript',
-    description:
-      'Typescript is a great language to build your app with. It is a superset of JavaScript that aids in stability and scalability of your project.',
-    icon: 'simple-icons:typescript',
+    icon: 'logos:typescript-icon',
   },
   {
     name: 'React',
-    description:
-      "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. With it's great state management one can build complex applications that allow great interactive experiences for users.",
-    icon: 'simple-icons:react',
+    icon: 'logos:react',
+  },
+  {
+    name: 'NextJS',
+    icon: 'logos:nextjs-icon',
   },
   {
     name: 'Ruby on Rails',
-    description:
-      'Building your backend with rails is a great way to get your app up and running in no time. It is a framework that allows you to build a robust backend with a simple API.',
-    icon: 'simple-icons:rubyonrails',
+    icon: 'logos:rails',
   },
   {
     name: 'AWS',
-    description:
-      'Languages, libraries, and frameworks still need somewhere to run. AWS is a reliable and scalable cloud platform to host your applications.',
-    icon: 'simple-icons:amazonaws',
+    icon: 'logos:aws',
+  },
+  {
+    name: 'Swift',
+    icon: 'logos:swift',
+  },
+  {
+    name: 'Python',
+    icon: 'logos:python',
+  },
+  {
+    name: 'Rust',
+    icon: 'logos:rust',
+  },
+  {
+    name: 'Golang',
+    icon: 'logos:go',
   },
 ];
 ---
 
-<div>
+<div id="TechSet">
   <div class="mb-10 flex items-center justify-center gap-4">
     <a href="/#TechSet" class="group">
       <h2 class="text-white text-3xl">
-        Main <span
-          class="text-secondary-500 shadow-secondary-500 transition-all"
-        >techs
-        <span class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-secondary-500"></span>
+        Main <span class="text-secondary-500 shadow-secondary-500 transition-all"
+          >techs
+          <span
+            class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-secondary-500"
+          ></span>
         </span>
       </h2>
     </a>
@@ -44,7 +57,17 @@ const techs = [
     <div class="flex-grow border-t border-gray-400 opacity-50"></div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-3" id="TechSet">
-    {techs.map((tech) => <Tech {...tech} />)}
+  <div class="flex gap-5 items-center h-36 overflow-x-auto -ml-4 pl-4 -mb-4 pb-4">
+    {
+      techs.slice(0, 6).map((tech) => (
+        <a>
+          <Tech {...tech} />
+        </a>
+      ))
+    }
+  </div>
+
+  <div class="flex gap-3 items-center h-24 overflow-x-auto -ml-4 pl-4 -mb-4 pb-4">
+    {techs.slice(6).map((tech) => <Tech {...tech} small />)}
   </div>
 </div>

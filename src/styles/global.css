@@ -69,26 +69,27 @@
 }
 
 body {
-  @apply bg-primary-500;
+  @apply bg-primary-400;
+  @apply bg-gradient-to-r from-primary-500 to-primary-300;
 }
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-  background: #252525;
+  width: 6px;
+  height: 6px;
+  background: rgba(0, 0, 0, 0);
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   border-radius: 100vh;
-  background: #252525;
+  background: rgba(0, 0, 0, 0);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #131313;
   border-radius: 100vh;
-  border: 3px solid #252525;
+  border: 2px solid #252525;
 }
 
 /* Handle on hover */
