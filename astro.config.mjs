@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 import partytown from '@astrojs/partytown';
 import tailwind from '@astrojs/tailwind';
 
-import image from '@astrojs/image';
+// import image from '@astrojs/image';
 
 // https://astro.build/config
 export default defineConfig({
@@ -21,7 +21,6 @@ export default defineConfig({
       },
     }),
     tailwind(),
-    image(),
   ],
   vite: {
     ssr: {
@@ -29,5 +28,7 @@ export default defineConfig({
     },
   },
   output: 'server',
-  adapter: vercel(),
+  adapter: vercel({
+    analytics: true,
+  }),
 });

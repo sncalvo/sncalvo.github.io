@@ -1,7 +1,8 @@
-import { prisma } from '../../server/db/client';
+import { blogPost } from '../../../migrations/schema';
+import { db } from '../../server/db/client';
 
 export default async function getAll() {
-  const blogs = await prisma.blogPost.findMany();
+  const blogs = await db.select().from(blogPost);
 
   return blogs;
 }
