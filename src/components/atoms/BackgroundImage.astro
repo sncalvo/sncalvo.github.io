@@ -1,5 +1,5 @@
 ---
-import { Picture } from '@astrojs/image/components';
+// import { Picture } from '@astrojs/image/components';
 
 interface Props {
   imageSrc: string;
@@ -8,14 +8,4 @@ interface Props {
 const { imageSrc } = Astro.props;
 ---
 
-<div class="absolute h-full w-full">
-  <Picture
-    class="absolute h-full w-full blur-lg object-cover"
-    src={imageSrc}
-    sizes="(max-width: 1024px) 100vw, 800px"
-    alt="code background image"
-    background="blue"
-    widths={[822]}
-    aspectRatio={1.38}
-  />
-</div>
+<img class="absolute h-full w-full blur-lg object-cover" src={imageSrc} alt="code background image" />

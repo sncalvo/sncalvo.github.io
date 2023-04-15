@@ -1,6 +1,7 @@
 ---
-import { Picture } from '@astrojs/image/components';
-import type { BlogPost } from '@prisma/client';
+import type { BlogPost } from '../../../migrations/schema';
+
+// import { Picture } from '@astrojs/image/components';
 
 interface Props {
   blog: BlogPost;
@@ -18,21 +19,21 @@ const contentBeginning = content.replace(/<[^>]*>?/gm, '').substring(0, 75) + '.
     class="text-secondary-500 grid grid-cols-3 gap-3 h-40 shadow shadow-secondary-500 hover:shadow-white-500 animation-all duration-300 delay-100 p-3 rounded hover:bg-primary-400"
     href={link || `/blogs/${id}`}
   >
-    <!-- <img -->
-    <!--   class="object-cover h-full w-full rounded col-span-1 overflow-hidden" -->
-    <!--   src={thumbnail} -->
-    <!--   alt={`${title} image`} -->
-    <!-- /> -->
-
-    <Picture
-      src={thumbnail}
-      widths={[200, 400, 800]}
-      aspectRatio="4:3"
+    <img
       class="object-cover h-full w-full rounded col-span-1 overflow-hidden"
-      sizes="(max-width: 800px) 100vw, 800px"
+      src={thumbnail}
       alt={`${title} image`}
-      background="gray"
     />
+
+    <!-- <Picture -->
+    <!--   src={thumbnail} -->
+    <!--   widths={[200, 400, 800]} -->
+    <!--   aspectRatio="4:3" -->
+    <!--   class="object-cover h-full w-full rounded col-span-1 overflow-hidden" -->
+    <!--   sizes="(max-width: 800px) 100vw, 800px" -->
+    <!--   alt={`${title} image`} -->
+    <!--   background="gray" -->
+    <!-- /> -->
 
     <div class="col-span-2">
       <h2 class="text-lg flex-grow">{title}</h2>
