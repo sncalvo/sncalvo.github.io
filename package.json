@@ -8,13 +8,14 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "postinstall": "prisma generate"
+    "astro": "astro"
   },
   "devDependencies": {
-    "@prisma/client": "4.9.0"
+    "@types/pg": "^8.6.6",
+    "drizzle-kit": "^0.17.4"
   },
   "dependencies": {
+    "@astrojs/image": "^0.14.0",
     "@astrojs/partytown": "^1.0.3",
     "@astrojs/sitemap": "^1.0.1",
     "@astrojs/solid-js": "^2.0.2",
@@ -22,9 +23,9 @@
     "@astrojs/vercel": "^3.1.0",
     "astro": "^2.0.12",
     "astro-icon": "sncalvo/astro-icon#main",
-    "prisma": "^4.10.1",
+    "drizzle-orm": "^0.23.13",
+    "pg": "^8.10.0",
     "solid-js": "^1.6.10",
-    "tailwindcss": "^3.2.6",
-    "@astrojs/image": "^0.14.0"
+    "tailwindcss": "^3.2.6"
   }
 }
