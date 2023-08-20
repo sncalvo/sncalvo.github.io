@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 import solid from '@astrojs/solid-js';
-import vercel from '@astrojs/vercel/serverless';
+import vercel from '@astrojs/vercel/edge';
 import sitemap from '@astrojs/sitemap';
 import partytown from '@astrojs/partytown';
 import tailwind from '@astrojs/tailwind';
