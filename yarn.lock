@@ -3655,10 +3655,10 @@ slash@^4.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-4.0.0.tgz#2422372176c4c6c5addb5e2ada885af984b396a7"
   integrity sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew==
 
-solid-js@^1.7.3:
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/solid-js/-/solid-js-1.7.3.tgz#3e2e2ce7f2415336f5c96668f9524ad51f6a718b"
-  integrity sha512-4hwaF/zV/xbNeBBIYDyu3dcReOZBECbO//mrra6GqOrKy4Soyo+fnKjpZSa0nODm6j1aL0iQRh/7ofYowH+jzw==
+solid-js@^1.7.11:
+  version "1.7.11"
+  resolved "https://registry.yarnpkg.com/solid-js/-/solid-js-1.7.11.tgz#c37706382bcfd563459810434b1382b550c27867"
+  integrity sha512-JkuvsHt8jqy7USsy9xJtT18aF9r2pFO+GB8JQ2XGTvtF49rGTObB46iebD25sE3qVNvIbwglXOXdALnJq9IHtQ==
   dependencies:
     csstype "^3.1.0"
     seroval "^0.5.0"
