@@ -78,10 +78,10 @@
   dependencies:
     prismjs "^1.28.0"
 
-"@astrojs/sitemap@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@astrojs/sitemap/-/sitemap-1.0.1.tgz#8afbc003d3be4bffccac04b682cf65a319870205"
-  integrity sha512-qexepZPH6/dLToI/njxr2FjvyxJU0HBAnQRNzEggF0ok811oSNC6su1DkyW2VKp0TNPbWoujuSbcb1yFOjnAqA==
+"@astrojs/sitemap@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@astrojs/sitemap/-/sitemap-2.0.2.tgz#a11ecabfae89470abaa5955b8951452f5e6b8261"
+  integrity sha512-dFWtdFwN8kxDiqIxF8T8ODqsUr6hG+EQlFEqm+3oQkhAkucF9QkYLM5Q72mEbYytkL4jvKyHbW1u10T5sWBZew==
   dependencies:
     sitemap "^7.1.1"
     zod "^3.17.3"
@@ -4063,10 +4063,10 @@ sitemap@^7.1.1:
     arg "^5.0.0"
     sax "^1.2.4"
 
-solid-js@^1.7.3:
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/solid-js/-/solid-js-1.7.3.tgz#3e2e2ce7f2415336f5c96668f9524ad51f6a718b"
-  integrity sha512-4hwaF/zV/xbNeBBIYDyu3dcReOZBECbO//mrra6GqOrKy4Soyo+fnKjpZSa0nODm6j1aL0iQRh/7ofYowH+jzw==
+solid-js@^1.7.11:
+  version "1.7.11"
+  resolved "https://registry.yarnpkg.com/solid-js/-/solid-js-1.7.11.tgz#c37706382bcfd563459810434b1382b550c27867"
+  integrity sha512-JkuvsHt8jqy7USsy9xJtT18aF9r2pFO+GB8JQ2XGTvtF49rGTObB46iebD25sE3qVNvIbwglXOXdALnJq9IHtQ==
   dependencies:
     csstype "^3.1.0"
     seroval "^0.5.0"
