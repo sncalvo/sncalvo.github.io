@@ -1,6 +1,7 @@
 ---
 import Common from '../layouts/Common.astro';
 import Presentation from '../components/molecules/Presentation.astro';
+import FeaturedBlogPosts from '../components/molecules/FeaturedBlogPosts.astro';
 import SkillSet from '../components/molecules/SkillSet.astro';
 import About from '../components/molecules/About.astro';
 import TechSet from '../components/molecules/TechSet.astro';
@@ -32,7 +33,9 @@ As a FullStack developer, I am eager to learn the tools necessary for the job. E
         place="Eagerworks"
       />
 
-      <div class="p-4 md:px-10 flex flex-col gap-10 lg:px-44 xl:px-72">
+      <div class="p-4 flex flex-col gap-10 mx-auto max-w-6xl">
+        <FeaturedBlogPosts />
+
         <SkillSet />
 
         <About description={description} />

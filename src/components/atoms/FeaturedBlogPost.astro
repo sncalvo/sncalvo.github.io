@@ -1,0 +1,27 @@
+---
+import type { BlogPost } from '../../../migrations/schema';
+
+interface Props extends BlogPost {}
+
+const { id, title, content, thumbnail, link } = Astro.props;
+
+const contentBeginning = content.replace(/<[^>]*>?/gm, '').substring(0, 75) + '...';
+---
+
+<a
+  class="relative transition-all ease-in-out delay-100 duration-200 border border-secondary-500 rounded w-full h-56 text-white shadow-2xl md:hover:scale-110 active:scale-75 hover:shadow-secondary-500"
+  href={link || `/blogs/${id}`}
+>
+  <img
+    class="object-cover h-full w-full rounded col-span-1 overflow-hidden"
+    src={thumbnail}
+    alt={`${title} image`}
+  />
+
+  <div
+    class="absolute p-5 top-5 bottom-5 items-center justify-center flex flex-col left-5 right-5 bg-secondary-400 bg-opacity-50 rounded"
+  >
+    <h2 class="text-center font-bold">{title}</h2>
+    <p class="text-xs">{contentBeginning}</p>
+  </div>
+</a>

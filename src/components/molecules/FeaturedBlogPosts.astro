@@ -1,0 +1,28 @@
+---
+import FeaturedBlogPost from '../atoms/FeaturedBlogPost.astro';
+
+import { getFeatured } from '../../services/blogs';
+
+const featuredBlogs = await getFeatured();
+---
+
+<div id="FeaturedBlogPosts">
+  <div class="mb-2 flex items-center justify-center gap-4">
+    <div class="flex-grow border-t border-gray-400 opacity-50"></div>
+
+    <a href="/#FeaturedBlogPosts" class="group">
+      <h2 class="text-white text-3xl">
+        Featured <span class="text-secondary-500 shadow-secondary-500 transition-all"
+          >blog posts
+          <span
+            class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-secondary-500"
+          ></span>
+        </span>
+      </h2>
+    </a>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+    {featuredBlogs.map((post) => <FeaturedBlogPost {...post} />)}
+  </div>
+</div>

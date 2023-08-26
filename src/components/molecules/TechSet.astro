@@ -5,38 +5,47 @@ const techs = [
   {
     name: 'Typescript',
     icon: 'logos:typescript-icon',
+    link: 'https://www.typescriptlang.org/',
   },
   {
     name: 'React',
     icon: 'logos:react',
+    link: 'https://reactjs.org/',
   },
   {
     name: 'NextJS',
     icon: 'logos:nextjs-icon',
+    link: 'https://nextjs.org/',
   },
   {
     name: 'Ruby on Rails',
     icon: 'logos:rails',
+    link: 'https://rubyonrails.org/',
   },
   {
     name: 'AWS',
     icon: 'logos:aws',
+    link: 'https://aws.amazon.com/',
   },
   {
     name: 'Swift',
     icon: 'logos:swift',
+    link: 'https://developer.apple.com/swift/',
   },
   {
     name: 'Python',
     icon: 'logos:python',
+    link: 'https://www.python.org/',
   },
   {
     name: 'Rust',
     icon: 'logos:rust',
+    link: 'https://www.rust-lang.org/',
   },
   {
     name: 'Golang',
     icon: 'logos:go',
+    link: 'https://golang.org/',
   },
 ];
 ---
@@ -60,7 +69,7 @@ const techs = [
   <div class="flex gap-5 items-center h-36 overflow-x-auto -ml-4 pl-4 -mb-4 pb-4">
     {
       techs.slice(0, 6).map((tech) => (
-        <a>
+        <a href={tech.link}>
           <Tech {...tech} />
         </a>
       ))
@@ -68,6 +77,12 @@ const techs = [
   </div>
 
   <div class="flex gap-3 items-center h-24 overflow-x-auto -ml-4 pl-4 -mb-4 pb-4">
-    {techs.slice(6).map((tech) => <Tech {...tech} small />)}
+    {
+      techs.slice(6).map((tech) => (
+        <a href={tech.link}>
+          <Tech {...tech} small />
+        </a>
+      ))
+    }
   </div>
 </div>

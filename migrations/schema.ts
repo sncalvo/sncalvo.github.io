@@ -8,6 +8,7 @@ export const blogPost = sqliteTable("BlogPost", {
   published: integer("published").notNull(),
   thumbnail: text("thumbnail").notNull(),
   link: text("link").notNull(),
+  featured: integer("featured").notNull(),
 });
 
 export type BlogPost = InferModel<typeof blogPost>;
