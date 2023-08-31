@@ -7,20 +7,20 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs",
     "astro": "astro"
   },
   "devDependencies": {
     "drizzle-kit": "^0.19.13"
   },
   "dependencies": {
-    "@astrojs/partytown": "^1.2.3",
-    "@astrojs/sitemap": "^2.0.2",
-    "@astrojs/solid-js": "^2.1.0",
-    "@astrojs/tailwind": "^4.0.0",
-    "@astrojs/vercel": "^3.2.4",
+    "@astrojs/deno": "^5.0.0",
+    "@astrojs/partytown": "^2.0.0",
+    "@astrojs/sitemap": "^3.0.0",
+    "@astrojs/solid-js": "^3.0.0",
+    "@astrojs/tailwind": "^5.0.0",
     "@libsql/client": "^0.3.1",
-    "astro": "^2.9.3",
+    "astro": "^3.0.5",
     "astro-icon": "sncalvo/astro-icon#main",
     "drizzle-orm": "0.28.2",
     "solid-js": "^1.7.11",
