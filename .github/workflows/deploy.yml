@@ -1,28 +1,29 @@
-name: Github Pages Astro CI
+name: Deploy
+on: [push]
+
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
-
+    name: Deploy
+    runs-on: ubuntu-latest
     permissions:
-      contents: write
+      id-token: write # Necesario para la autentificación con Deno Deploy
+      contents: read # Necesario para clonar el repositorio
 
     steps:
-      - name: Check out your repository using git
-        uses: actions/checkout@v2
+      - name: Clonar el repositorio
+        uses: actions/checkout@v3
 
-      - name: Use Node.js 16
-        uses: actions/setup-node@v2
+      # ¿No usas npm? Cambia `npm ci` por `yarn install` o `pnpm i`.
+      - name: Instalar las dependencias
+        run: npm ci
+
+      # ¿No usas npm? Cambia `npm run build` por `yarn build` o `pnpm run build`.
+      - name: Construir Astro
+        run: npm run build
+
+      - name: Subir a Deno Deploy
+        uses: denoland/deployctl@v1
         with:
-          node-version: 16
-
-      - name: Install dependencies
-        run: yarn install
-
-      - name: Build Astro
-        run: yarn build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          project: my-deno-project # TODO: sustituir por el nombre del proyecto Deno Deploy
+          entrypoint: server/entry.mjs
+          root: dist
