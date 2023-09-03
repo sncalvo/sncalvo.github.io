@@ -6,24 +6,22 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     permissions:
-      id-token: write # Necesario para la autentificación con Deno Deploy
-      contents: read # Necesario para clonar el repositorio
+      id-token: write
+      contents: read
 
     steps:
-      - name: Clonar el repositorio
+      - name: Clonse repository
         uses: actions/checkout@v3
 
-      # ¿No usas npm? Cambia `npm ci` por `yarn install` o `pnpm i`.
-      - name: Instalar las dependencias
-        run: npm ci
+      - name: Instal dependencies
+        run: pnpm i
 
-      # ¿No usas npm? Cambia `npm run build` por `yarn build` o `pnpm run build`.
-      - name: Construir Astro
-        run: npm run build
+      - name: Build Astro
+        run: pnpm run build
 
-      - name: Subir a Deno Deploy
+      - name: Deno deploy
         uses: denoland/deployctl@v1
         with:
-          project: my-deno-project # TODO: sustituir por el nombre del proyecto Deno Deploy
+          project: sncalvo.github.io
           entrypoint: server/entry.mjs
           root: dist
