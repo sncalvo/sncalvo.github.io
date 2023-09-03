@@ -1,5 +1,5 @@
 ---
-import PresentationParagraph from '../atoms/PresentationParagraph';
+import PresentationParagraph from '../atoms/PresentationParagraph.astro';
 import BackgroundImage from '../atoms/BackgroundImage.astro';
 
 const { name, birthDate, position, place } = Astro.props;
@@ -8,7 +8,6 @@ const { name, birthDate, position, place } = Astro.props;
 <div class="h-screen w-full flex items-center justify-center" id="Presentation">
   <div class="z-10 p-5">
     <PresentationParagraph
-      client:load
       name={name}
       birthDate={birthDate}
       position={position}

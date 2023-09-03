@@ -1,5 +1,8 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 import '../styles/global.css';
+
+import Menu from '../components/molecules/Menu.svelte';
 
 const { title, description } = Astro.props;
 ---
@@ -35,6 +38,8 @@ const { title, description } = Astro.props;
     <meta name="theme-color" content="#011627" />
   </head>
   <body>
+    <Menu client:load transition:persist />
     <slot />
   </body>
+  <ViewTransitions />
 </html>
