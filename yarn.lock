@@ -719,25 +719,25 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@libsql/client@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@libsql/client/-/client-0.3.1.tgz#55227ba35186845924665aad7f60585bfd385fde"
-  integrity sha512-43/zF8fJguXd6ENwYhddpbR05bDVx3BQQUZ/BsJ0b4zLJge+WFa2smC3ILVGqvVu4ZoixbC0sfLTdVPdd2NjDA==
+"@libsql/client@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@libsql/client/-/client-0.3.2.tgz#553e89febd800e83e599beebb5006e73cd51f298"
+  integrity sha512-e0qgf7gFOwhu0ueU/RK68TmD0PnjX3RaeM5lrJowGMEZjvh/shZ4BhwPA26Ec0nSa4oiZ0s0zn/T5YjcgY1bTw==
   dependencies:
-    "@libsql/hrana-client" "^0.4.3"
+    "@libsql/hrana-client" "^0.5.0"
     better-sqlite3 "^8.0.1"
     js-base64 "^3.7.5"
 
-"@libsql/hrana-client@^0.4.3":
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/@libsql/hrana-client/-/hrana-client-0.4.4.tgz#da83a152a5592e9b2b9b6c1b3b5dd8e02d9d9aaf"
-  integrity sha512-BevUg0UBRLs5AEqn0fjrMcl49xCtwuFavgK4MzCb3PTtxpEbQ24oGXctspN9drBiUVmqSZr7go887aiLLzSO3A==
+"@libsql/hrana-client@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@libsql/hrana-client/-/hrana-client-0.5.0.tgz#24fa786d708c735cab43a384d66bdb57c2856571"
+  integrity sha512-o9yXH+9XBPnMSrBkY17q2xknfNXJaCHQv4rFJikt1g8M0d80hwp4ZZ1jHwacuL61wRa4j6qKMFqh9ti+CoTH1A==
   dependencies:
-    "@libsql/isomorphic-fetch" "^0.1.1"
-    "@libsql/isomorphic-ws" "^0.1.2"
+    "@libsql/isomorphic-fetch" "^0.1.6"
+    "@libsql/isomorphic-ws" "^0.1.3"
     js-base64 "^3.7.5"
 
-"@libsql/isomorphic-fetch@^0.1.1":
+"@libsql/isomorphic-fetch@^0.1.6":
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/@libsql/isomorphic-fetch/-/isomorphic-fetch-0.1.6.tgz#73b70794f9945a167ac025c90eb9515b76edd7d4"
   integrity sha512-8qhxEDmVBDb54E9xdW1xqw3zLNShkMZpf5YQU3PvwjtKNLOPde59Oqez+RnZHsYkt9zQxxOF+7gSHVJeP/UWqg==
@@ -745,7 +745,7 @@
     "@types/node-fetch" "^2.2.6"
     node-fetch "^2.6.12"
 
-"@libsql/isomorphic-ws@^0.1.2":
+"@libsql/isomorphic-ws@^0.1.3":
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/@libsql/isomorphic-ws/-/isomorphic-ws-0.1.3.tgz#b66e88af15c44175f8828406aaddc9ed552afbc9"
   integrity sha512-54dZXgYwWDKsnfWv8GCVYvhn6RDlqFDGAc8EQMd941yvGMsGzo06Gn6Iyjw//nJ1iJO97FbXgoQ1apikoFD/WA==
