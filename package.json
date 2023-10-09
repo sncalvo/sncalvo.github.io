@@ -14,7 +14,7 @@
     "drizzle-kit": "^0.19.13"
   },
   "dependencies": {
-    "@astrojs/partytown": "^1.2.3",
+    "@astrojs/partytown": "^2.0.1",
     "@astrojs/sitemap": "^2.0.2",
     "@astrojs/solid-js": "^2.1.0",
     "@astrojs/tailwind": "^4.0.0",
