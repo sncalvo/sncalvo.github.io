@@ -1,28 +1,31 @@
-name: Github Pages Astro CI
+name: Deploy
+on: [push]
+
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
-
+    name: Deploy
+    runs-on: ubuntu-latest
     permissions:
-      contents: write
+      id-token: write
+      contents: read
 
     steps:
-      - name: Check out your repository using git
-        uses: actions/checkout@v2
+      - name: Clone repository
+        uses: actions/checkout@v3
 
-      - name: Use Node.js 16
-        uses: actions/setup-node@v2
+      - uses: pnpm/action-setup@v2
         with:
-          node-version: 16
+          version: 8
 
       - name: Install dependencies
-        run: yarn install
+        run: pnpm i
 
       - name: Build Astro
-        run: yarn build
+        run: pnpm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deno deploy
+        uses: denoland/deployctl@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          project: fresh-dove-66
+          entrypoint: server/entry.mjs
+          root: dist

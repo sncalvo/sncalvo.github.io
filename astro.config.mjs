@@ -1,34 +1,37 @@
 import { defineConfig } from 'astro/config';
-import solid from '@astrojs/solid-js';
-import vercel from '@astrojs/vercel/edge';
 import sitemap from '@astrojs/sitemap';
 import partytown from '@astrojs/partytown';
 import tailwind from '@astrojs/tailwind';
+import deno from "@astrojs/deno";
 
-// import image from '@astrojs/image';
+import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://scalvo.dev/',
   integrations: [
-    solid(),
     sitemap({
-      customPages: ['https://scalvo.dev', 'https://scalvo.dev/blog'],
+      customPages: ['https://scalvo.dev', 'https://scalvo.dev/blog']
     }),
     partytown({
       config: {
-        forward: ['dataLayer.push'],
-      },
+        forward: ['dataLayer.push']
+      }
     }),
     tailwind(),
+    svelte()
   ],
   vite: {
     ssr: {
       external: ['svgo'],
-    },
+      noExternal: ["solid-js"]
+    }
+  },
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/noop'
+    }
   },
   output: 'server',
-  adapter: vercel({
-    analytics: true,
-  }),
+  adapter: deno()
 });

@@ -1,7 +1,6 @@
 ---
 import Common from '../../layouts/Common.astro';
 
-import Menu from '../../components/molecules/Menu';
 import { get } from '../../services/blogs';
 
 const { id } = Astro.params;
@@ -11,8 +10,6 @@ const blog = await get(id as string);
 
 <Common title={blog?.title} description={blog?.content}>
   <div class="overflow-x-hidden">
-    <Menu client:visible />
-
     <div class="p-24">
       <h1 class="text-4xl text-secondary-500 mb-10">{blog?.title}</h1>
 
