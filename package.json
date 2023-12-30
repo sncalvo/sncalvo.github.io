@@ -16,7 +16,7 @@
   "dependencies": {
     "@astrojs/deno": "^5.0.0",
     "@astrojs/partytown": "^2.0.3",
-    "@astrojs/sitemap": "^3.0.0",
+    "@astrojs/sitemap": "^3.0.4",
     "@astrojs/svelte": "^4.0.0",
     "@astrojs/tailwind": "^5.0.0",
     "@libsql/client": "^0.3.6",
