@@ -34,8 +34,11 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://sncalvo.com/assets/profile.jpeg" />
+    <meta property="og:image" content="https://sncalvo.dev/assets/profile.jpeg" />
+    <meta property="og:url" content="https://sncalvo.dev" />
+    <meta property="og:type" content="website" />
     <meta name="theme-color" content="#011627" />
+    <link rel="canonical" href="https://sncalvo.dev" />
   </head>
   <body>
     <Menu client:load transition:persist />
