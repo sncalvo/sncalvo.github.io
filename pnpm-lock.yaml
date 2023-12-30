@@ -9,8 +9,8 @@ dependencies:
     specifier: ^5.0.0
     version: 5.0.0(astro@3.0.5)
   '@astrojs/partytown':
-    specifier: ^2.0.0
-    version: 2.0.0
+    specifier: ^2.0.3
+    version: 2.0.3
   '@astrojs/sitemap':
     specifier: ^3.0.0
     version: 3.0.0
@@ -99,8 +99,8 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/partytown@2.0.0:
-    resolution: {integrity: sha512-WKyWs3TdxAG4b0+vkMWwDProatsikfvpjJQ+IIDEI7QvPBmdIbD9BDfuGgKIETnmkA1DxFj9G3jiGn2DGiJKzg==}
+  /@astrojs/partytown@2.0.3:
+    resolution: {integrity: sha512-N7bQUxr4TQJKFiOnAr2cvvK9OrCWz2PwsTPTnGr9tRn+f3WCQN4jed9BB4yw9WdWcitYc/N2ECW7u09cg93tgg==}
     dependencies:
       '@builder.io/partytown': 0.8.0
       mrmime: 1.0.1
