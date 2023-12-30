@@ -19,7 +19,7 @@
     "@astrojs/sitemap": "^3.0.0",
     "@astrojs/svelte": "^4.0.0",
     "@astrojs/tailwind": "^5.0.0",
-    "@libsql/client": "^0.3.1",
+    "@libsql/client": "^0.3.6",
     "astro": "^3.0.5",
     "astro-icon": "sncalvo/astro-icon#main",
     "drizzle-orm": "0.28.2",
