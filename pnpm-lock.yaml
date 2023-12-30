@@ -21,8 +21,8 @@ dependencies:
     specifier: ^5.0.0
     version: 5.0.0(astro@3.0.5)(tailwindcss@3.3.3)
   '@libsql/client':
-    specifier: ^0.3.1
-    version: 0.3.2
+    specifier: ^0.3.6
+    version: 0.3.6
   astro:
     specifier: ^3.0.5
     version: 3.0.5
@@ -31,7 +31,7 @@ dependencies:
     version: github.com/sncalvo/astro-icon/125f99daf649a098b1d9593eebccb1e31190eaa7
   drizzle-orm:
     specifier: 0.28.2
-    version: 0.28.2(@libsql/client@0.3.2)
+    version: 0.28.2(@libsql/client@0.3.6)
   svelte:
     specifier: ^4.0.0
     version: 4.2.0
@@ -822,32 +822,49 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: false
 
-  /@libsql/client@0.3.2:
-    resolution: {integrity: sha512-e0qgf7gFOwhu0ueU/RK68TmD0PnjX3RaeM5lrJowGMEZjvh/shZ4BhwPA26Ec0nSa4oiZ0s0zn/T5YjcgY1bTw==}
+  /@libsql/client@0.3.6:
+    resolution: {integrity: sha512-3Mc4ZDI7X5ZLkMxX5XijiBeqhvyrny356lcj/KVVIeMXt9j6g4l+CRIsUvgcsyCAOUHqWqh0+TjI91bCKmdW+w==}
     dependencies:
-      '@libsql/hrana-client': 0.5.0
-      better-sqlite3: 8.5.2
+      '@libsql/hrana-client': 0.5.5
       js-base64: 3.7.5
+      libsql: 0.1.34
     transitivePeerDependencies:
       - bufferutil
       - encoding
       - utf-8-validate
     dev: false
 
-  /@libsql/hrana-client@0.5.0:
-    resolution: {integrity: sha512-o9yXH+9XBPnMSrBkY17q2xknfNXJaCHQv4rFJikt1g8M0d80hwp4ZZ1jHwacuL61wRa4j6qKMFqh9ti+CoTH1A==}
+  /@libsql/darwin-arm64@0.1.34:
+    resolution: {integrity: sha512-Wv8jvkj/fUAO8DF3A4HaddCMldUUpKcg/WW1sY95FNsSHOxktyxqU80jAp/tCuZ85GQIJozvgSr51/ARIC0gsw==}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@libsql/darwin-x64@0.1.34:
+    resolution: {integrity: sha512-2NQXD9nUzC08hg7FdcZLq5uTEwGz1KbD7YvUzQb/psO1lO/E/p83wl1es1082+Pp0z5pSPDWQeRTuccD41L+3w==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@libsql/hrana-client@0.5.5:
+    resolution: {integrity: sha512-i+hDBpiV719poqEiHupUUZYKJ9YSbCRFe5Q2PQ0v3mHIftePH6gayLjp2u6TXbqbO/Dv6y8yyvYlBXf/kFfRZA==}
     dependencies:
-      '@libsql/isomorphic-fetch': 0.1.6
-      '@libsql/isomorphic-ws': 0.1.3
+      '@libsql/isomorphic-fetch': 0.1.10
+      '@libsql/isomorphic-ws': 0.1.5
       js-base64: 3.7.5
+      node-fetch: 3.3.2
     transitivePeerDependencies:
       - bufferutil
       - encoding
       - utf-8-validate
     dev: false
 
-  /@libsql/isomorphic-fetch@0.1.6:
-    resolution: {integrity: sha512-8qhxEDmVBDb54E9xdW1xqw3zLNShkMZpf5YQU3PvwjtKNLOPde59Oqez+RnZHsYkt9zQxxOF+7gSHVJeP/UWqg==}
+  /@libsql/isomorphic-fetch@0.1.10:
+    resolution: {integrity: sha512-dH0lMk50gKSvEKD78xWMu60SY1sjp1sY//iFLO0XMmBwfVfG136P9KOk06R4maBdlb8KMXOzJ1D28FR5ZKnHTA==}
     dependencies:
       '@types/node-fetch': 2.6.4
       node-fetch: 2.7.0
@@ -855,14 +872,58 @@ packages:
       - encoding
     dev: false
 
-  /@libsql/isomorphic-ws@0.1.3:
-    resolution: {integrity: sha512-54dZXgYwWDKsnfWv8GCVYvhn6RDlqFDGAc8EQMd941yvGMsGzo06Gn6Iyjw//nJ1iJO97FbXgoQ1apikoFD/WA==}
+  /@libsql/isomorphic-ws@0.1.5:
+    resolution: {integrity: sha512-DtLWIH29onUYR00i0GlQ3UdcTRC6EP4u9w/h9LxpUZJWRMARk6dQwZ6Jkd+QdwVpuAOrdxt18v0K2uIYR3fwFg==}
     dependencies:
       '@types/ws': 8.5.5
       ws: 8.13.0
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
+    dev: false
+
+  /@libsql/linux-arm64-gnu@0.1.34:
+    resolution: {integrity: sha512-r3dY1FDYZ7eX5HX7HyAoYSqK5FPugj5NSB5Bt/nz+ygBWdXASgSKxkE/RqjJIM59vXwv300iJX9qhR5fXv8sTw==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@libsql/linux-arm64-musl@0.1.34:
+    resolution: {integrity: sha512-9AE/eNb9eQRcNsLxqtpLJxVEoIMmItrdwqJDImPJtOp10rhp4U0x/9RGKerl9Mg3ObVj676pyhAR2KzyudrOfQ==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@libsql/linux-x64-gnu@0.1.34:
+    resolution: {integrity: sha512-o8toY1Txstjt13fBhZbFe8sNAW6OaS6qVcp1Bd6bHkCLSBLZ6pjJmwzQN8rFv9QFBPAnaKP3lI4vaOXXw7huTA==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@libsql/linux-x64-musl@0.1.34:
+    resolution: {integrity: sha512-EldEmcAxxNPSCjJ73oFxg81PDDIpDbPqK/QOrhmmGYLvYwrnQtVRUIbARf80JQvcy6bCxOO/Q9dh6wGhnyHyYA==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@libsql/win32-x64-msvc@0.1.34:
+    resolution: {integrity: sha512-jnv0qfVMnrVv00r+wUOe6DHrHuao9y1w1lN543cV2J1JdQNJT/eSZzhyZFSlS3T2ZUvXfZfZ5GeL8U18IAID6w==}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@neon-rs/load@0.0.4:
+    resolution: {integrity: sha512-kTPhdZyTQxB+2wpiRcFWrDcejc4JI6tkPuS7UZCG4l6Zvc5kU/gGQ/ozvHTh1XR5tS+UlfAfGuPajjzQjCiHCw==}
     dev: false
 
   /@nodelib/fs.scandir@2.1.5:
@@ -1213,23 +1274,9 @@ packages:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
     dev: false
 
-  /better-sqlite3@8.5.2:
-    resolution: {integrity: sha512-w/EZ/jwuZF+/47mAVC2+rhR2X/gwkZ+fd1pbX7Y90D5NRaRzDQcxrHY10t6ijGiYIonCVsBSF5v1cay07bP5sg==}
-    requiresBuild: true
-    dependencies:
-      bindings: 1.5.0
-      prebuild-install: 7.1.1
-    dev: false
-
   /binary-extensions@2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
     engines: {node: '>=8'}
-    dev: false
-
-  /bindings@1.5.0:
-    resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==}
-    dependencies:
-      file-uri-to-path: 1.0.0
     dev: false
 
   /bl@4.1.0:
@@ -1639,7 +1686,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.28.2(@libsql/client@0.3.2):
+  /drizzle-orm@0.28.2(@libsql/client@0.3.6):
     resolution: {integrity: sha512-QRyuzvpJr7GE6LpvZ/sg2nAKNg2if1uGGkgFTiXn4auuYId//vVJe6HBsDTktfKfcaDGzIYos+/f+PS5EkBmrg==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -1701,7 +1748,7 @@ packages:
       sqlite3:
         optional: true
     dependencies:
-      '@libsql/client': 0.3.2
+      '@libsql/client': 0.3.6
     dev: false
 
   /dset@3.1.2:
@@ -1941,10 +1988,6 @@ packages:
     dependencies:
       node-domexception: 1.0.0
       web-streams-polyfill: 3.2.1
-    dev: false
-
-  /file-uri-to-path@1.0.0:
-    resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
     dev: false
 
   /fill-range@7.0.1:
@@ -2393,6 +2436,23 @@ packages:
   /kleur@4.1.5:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
+    dev: false
+
+  /libsql@0.1.34:
+    resolution: {integrity: sha512-LGofp7z7gi1Td6vu2GxaA4WyvSPEkuFn0f/ePSti1TsAlBU0LWxdk+bj9D8nqswzxiqe5wpAyTLhVzTIYSyXEA==}
+    cpu: [x64, arm64]
+    os: [darwin, linux, win32]
+    dependencies:
+      '@neon-rs/load': 0.0.4
+      detect-libc: 2.0.2
+    optionalDependencies:
+      '@libsql/darwin-arm64': 0.1.34
+      '@libsql/darwin-x64': 0.1.34
+      '@libsql/linux-arm64-gnu': 0.1.34
+      '@libsql/linux-arm64-musl': 0.1.34
+      '@libsql/linux-x64-gnu': 0.1.34
+      '@libsql/linux-x64-musl': 0.1.34
+      '@libsql/win32-x64-msvc': 0.1.34
     dev: false
 
   /lilconfig@2.1.0:
