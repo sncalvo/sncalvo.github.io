@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "dotenv": "^16.3.1",
-    "drizzle-kit": "^0.20.10"
+    "drizzle-kit": "^0.20.13"
   },
   "dependencies": {
     "@astrojs/deno": "^5.0.1",
